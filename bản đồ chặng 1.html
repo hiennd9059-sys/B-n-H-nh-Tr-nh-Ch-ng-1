@@ -1,0 +1,393 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Bản Đồ 1 - Tuyến Đường Bộ Nội Địa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 10px;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8fafc;
+            overflow: hidden;
+        }
+
+        .header { 
+            text-align: center; 
+            background-color: #0b2545; 
+            color: white; 
+            padding: 10px; 
+            border-radius: 8px; 
+            margin-bottom: 10px; 
+        }
+        .header h2 { margin: 0; font-size: 18px; letter-spacing: 0.5px; }
+        .legend-bar { display: flex; justify-content: center; gap: 30px; margin-top: 6px; font-size: 12px; }
+        
+        .section-card { 
+            background: white; 
+            border-radius: 8px; 
+            border: 1px solid #cbd5e1; 
+            padding: 10px; 
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            height: calc(100vh - 90px);
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+        }
+        .section-title { 
+            background-color: #0b2545; 
+            color: white; 
+            display: inline-block; 
+            padding: 4px 12px; 
+            font-weight: bold; 
+            font-size: 13px; 
+            border-radius: 4px; 
+            margin-bottom: 10px; 
+            align-self: flex-start;
+        }
+        
+        .grid-container { 
+            display: grid; 
+            grid-template-columns: 1fr 380px; 
+            gap: 12px; 
+            flex: 1;
+            min-height: 0;
+        }
+
+        .sidebar-right {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            height: 100%;
+            min-height: 0;
+        }
+        
+        .info-box { 
+            background: #f8fafc; 
+            border: 1px solid #e2e8f0; 
+            border-radius: 6px; 
+            padding: 12px 14px; 
+            font-size: 13px; 
+            line-height: 1.4; 
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-sizing: border-box;
+        }
+        
+        .box-top { flex: 2; }
+        .box-bottom { flex: 3; }
+
+        .info-box h4 { margin: 0 0 6px 0; color: #1e293b; border-bottom: 1px solid #e2e8f0; padding-bottom: 6px; font-size: 14px; }
+        .info-box p { margin: 2px 0; }
+        
+        .map-frame { 
+            width: 100%; 
+            height: 100%; 
+            border-radius: 6px; 
+            overflow: hidden; 
+            border: 1px solid #cbd5e1; 
+            position: relative; 
+        }
+        .warning-text { color: #dc2626; font-weight: bold; }
+        
+        .leaflet-tile-container img {
+            filter: contrast(112%) brightness(98%);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h2>TUYẾN VẬN CHUYỂN: ICD TRƯỜNG THỌ → CẢNG CÁT LÁI → HAMBURG, ĐỨC</h2>
+        <div class="legend-bar">
+            <span><i class="fa-solid fa-truck" style="color: #4ade80;"></i> <b>ĐƯỜNG BỘ:</b> ICD Trường Thọ → Cảng Cát Lái</span>
+            <span><i class="fa-solid fa-ship" style="color: #60a5fa;"></i> <b>ĐƯỜNG BIỂN:</b> Cảng Cát Lái → Hamburg</span>
+            <span><i class="fa-solid fa-location-dot" style="color: #f87171;"></i> <b>ĐÍCH ĐẾN:</b> Port of Hamburg, Germany</span>
+        </div>
+    </div>
+
+    <div class="section-card">
+        <div class="section-title">1. CHẶNG ĐƯỜNG BỘ NỘI ĐỊA: ICD TRƯỜNG THỌ → CẢNG CÁT LÁI</div>
+        <div class="grid-container">
+            <!-- BẢN ĐỒ FULL BÊN TRÁI -->
+            <div class="map-frame"><div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><span style="color:#565656">Make this Notebook Trusted to load map: File -> Trust Notebook</span><iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    
+    &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css&quot;/&gt;
+    
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
+            &lt;style&gt;
+                #map_a6d909ab2f8ce7482b8029ce8996f197 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            &lt;/style&gt;
+
+            &lt;style&gt;html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            &lt;/style&gt;
+
+            &lt;style&gt;#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            &lt;/style&gt;
+
+            &lt;script&gt;
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            &lt;/script&gt;
+
+        
+&lt;/head&gt;
+&lt;body&gt;
+    
+    
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_a6d909ab2f8ce7482b8029ce8996f197&quot; &gt;&lt;/div&gt;
+        
+&lt;/body&gt;
+&lt;script&gt;
+    
+    
+            var map_a6d909ab2f8ce7482b8029ce8996f197 = L.map(
+                &quot;map_a6d909ab2f8ce7482b8029ce8996f197&quot;,
+                {
+                    center: [10.785, 106.765],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  &quot;zoom&quot;: 13,
+  &quot;zoomControl&quot;: true,
+  &quot;preferCanvas&quot;: false,
+  &quot;zoomSnap&quot;: 0.25,
+  &quot;zoomDelta&quot;: 0.25,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e5906cb8a5e1dc470c932a9ad0000e37 = L.tileLayer(
+                &quot;https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png&quot;,
+                {
+  &quot;minZoom&quot;: 0,
+  &quot;maxZoom&quot;: 18,
+  &quot;maxNativeZoom&quot;: 18,
+  &quot;noWrap&quot;: false,
+  &quot;attribution&quot;: &quot;CartoDB Voyager&quot;,
+  &quot;subdomains&quot;: &quot;abc&quot;,
+  &quot;detectRetina&quot;: false,
+  &quot;tms&quot;: false,
+  &quot;opacity&quot;: 1,
+}
+
+            );
+        
+    
+            tile_layer_e5906cb8a5e1dc470c932a9ad0000e37.addTo(map_a6d909ab2f8ce7482b8029ce8996f197);
+        
+    
+            map_a6d909ab2f8ce7482b8029ce8996f197.fitBounds(
+                [[10.76, 106.74], [10.84, 106.8]],
+                {}
+            );
+        
+    
+            var poly_line_334ffe556f5c1ba9a360a9863815c47b = L.polyline(
+                [[10.835828, 106.762613], [10.835944, 106.762583], [10.835986, 106.762538], [10.836584, 106.762281], [10.836351, 106.761874], [10.836502, 106.76181], [10.836695, 106.761723], [10.836811, 106.761645], [10.836895, 106.761548], [10.83702, 106.761328], [10.83708, 106.76125], [10.836909, 106.761126], [10.836876, 106.7611], [10.836825, 106.761073], [10.836812, 106.76107], [10.836801, 106.761074], [10.836778, 106.761092], [10.836771, 106.761099], [10.836762, 106.761101], [10.836755, 106.761095], [10.836695, 106.761018], [10.836656, 106.760994], [10.836625, 106.760972], [10.836573, 106.760932], [10.836544, 106.760907], [10.836533, 106.760899], [10.836525, 106.760901], [10.836512, 106.760909], [10.836482, 106.760938], [10.83647, 106.760947], [10.836456, 106.760946], [10.836445, 106.760934], [10.836429, 106.760911], [10.836414, 106.760894], [10.8364, 106.760878], [10.836322, 106.760756], [10.83622, 106.760632], [10.83606, 106.760718], [10.835943, 106.760838], [10.835935, 106.760875], [10.836027, 106.76104], [10.836023, 106.761058], [10.835911, 106.76109], [10.835794, 106.761109], [10.835691, 106.761056], [10.835427, 106.761022], [10.835336, 106.760959], [10.834809, 106.76098], [10.834692, 106.761035], [10.834771, 106.76127], [10.834787, 106.761473], [10.834787, 106.761677], [10.83477, 106.761741], [10.834739, 106.761854], [10.834287, 106.762588], [10.834121, 106.762855], [10.834096, 106.7629], [10.834083, 106.763029], [10.834124, 106.76326], [10.834186, 106.763469], [10.834352, 106.763879], [10.834423, 106.764054], [10.834629, 106.764476], [10.834737, 106.764727], [10.83482, 106.76495], [10.835307, 106.765221], [10.835753, 106.76547], [10.83571, 106.765516], [10.835656, 106.765575], [10.835586, 106.765618], [10.835538, 106.765701], [10.835481, 106.765796], [10.835268, 106.765677], [10.833939, 106.764932], [10.833083, 106.764463], [10.832172, 106.763956], [10.830865, 106.763229], [10.827534, 106.76138], [10.82691, 106.761034], [10.82664, 106.760885], [10.826509, 106.760807], [10.826327, 106.760703], [10.825208, 106.760053], [10.824944, 106.759901], [10.824631, 106.759729], [10.824216, 106.759502], [10.823477, 106.759168], [10.822693, 106.758865], [10.822552, 106.758809], [10.822203, 106.758723], [10.821991, 106.75867], [10.821344, 106.758517], [10.82038, 106.758288], [10.819789, 106.758175], [10.819707, 106.758161], [10.819628, 106.758148], [10.819325, 106.758152], [10.818691, 106.75803], [10.818474, 106.757911], [10.818413, 106.757899], [10.818362, 106.757889], [10.817752, 106.7578], [10.817165, 106.757682], [10.815926, 106.75742], [10.810899, 106.756482], [10.810141, 106.756299], [10.809985, 106.756249], [10.8099, 106.756223], [10.809734, 106.756169], [10.809498, 106.756078], [10.809204, 106.755953], [10.808883, 106.755819], [10.808609, 106.755697], [10.808383, 106.755594], [10.808217, 106.755506], [10.808056, 106.755426], [10.807782, 106.755275], [10.80769, 106.755225], [10.807605, 106.755178], [10.80758, 106.755114], [10.807431, 106.754945], [10.807052, 106.754513], [10.806173, 106.753612], [10.805709, 106.753117], [10.805571, 106.752982], [10.80546, 106.752896], [10.805363, 106.75285], [10.805267, 106.752828], [10.805148, 106.752818], [10.805014, 106.752845], [10.804858, 106.752919], [10.804651, 106.753056], [10.804296, 106.753304], [10.804172, 106.753375], [10.804056, 106.753433], [10.803913, 106.753473], [10.803606, 106.753552], [10.803436, 106.753548], [10.803109, 106.753501], [10.802875, 106.753436], [10.802785, 106.753411], [10.802027, 106.753287], [10.797128, 106.752407], [10.795831, 106.75217], [10.79313, 106.751669], [10.792773, 106.751607], [10.792577, 106.751576], [10.792367, 106.751542], [10.792349, 106.751473], [10.792339, 106.751435], [10.792327, 106.751391], [10.792284, 106.75123], [10.792212, 106.750991], [10.792187, 106.7509], [10.792112, 106.750571], [10.792095, 106.750452], [10.792058, 106.750093], [10.791942, 106.749499], [10.791877, 106.749202], [10.791784, 106.748796], [10.79176, 106.748703], [10.791881, 106.748671], [10.792002, 106.748622], [10.792313, 106.748393], [10.792352, 106.748352], [10.792587, 106.748108], [10.792776, 106.747825], [10.792035, 106.747767], [10.791689, 106.747769], [10.791551, 106.747805], [10.791508, 106.747829], [10.791489, 106.747839], [10.791632, 106.748436], [10.791687, 106.748681], [10.791716, 106.748812], [10.791807, 106.749224], [10.791851, 106.749454], [10.791951, 106.750022], [10.791961, 106.750086], [10.791968, 106.750139], [10.791986, 106.750315], [10.791994, 106.750492], [10.792019, 106.751177], [10.792021, 106.751257], [10.792021, 106.751333], [10.792018, 106.751416], [10.792014, 106.751481], [10.791997, 106.751478], [10.791853, 106.751452], [10.791208, 106.751337], [10.790535, 106.751205], [10.790089, 106.751082], [10.789917, 106.750981], [10.789489, 106.750826], [10.789299, 106.750748], [10.789112, 106.750663], [10.788929, 106.75057], [10.78875, 106.750469], [10.788574, 106.750361], [10.788402, 106.750245], [10.788236, 106.750122], [10.788074, 106.749992], [10.787955, 106.749916], [10.78784, 106.749835], [10.787727, 106.749748], [10.787617, 106.749655], [10.787576, 106.749635], [10.787533, 106.749623], [10.787488, 106.74962], [10.787444, 106.749625], [10.787402, 106.749638], [10.787363, 106.749659], [10.787328, 106.749687], [10.787163, 106.749836], [10.786846, 106.750119], [10.786763, 106.750198], [10.786684, 106.75028], [10.786602, 106.750373], [10.786523, 106.750469], [10.786468, 106.75053], [10.786409, 106.750588], [10.786326, 106.750657], [10.786286, 106.750685], [10.786237, 106.750718], [10.78609, 106.750813], [10.785602, 106.751198], [10.783932, 106.752671], [10.782464, 106.754007], [10.782179, 106.754257], [10.782057, 106.754359], [10.782, 106.754411], [10.78057, 106.755632], [10.780475, 106.755711], [10.780037, 106.756077], [10.779996, 106.756028], [10.77979, 106.756208], [10.77937, 106.75654], [10.778903, 106.756928], [10.778655, 106.757134], [10.77836, 106.757379], [10.77841, 106.757438], [10.777463, 106.758252], [10.776925, 106.75873], [10.775869, 106.759681], [10.775649, 106.759878], [10.775284, 106.760199], [10.774675, 106.760721], [10.774657, 106.760736], [10.774037, 106.761278], [10.773517, 106.761792], [10.773252, 106.762196], [10.773127, 106.762525], [10.773089, 106.762643], [10.773058, 106.762789], [10.773024, 106.763367], [10.773021, 106.763579], [10.773019, 106.763804], [10.772953, 106.766325], [10.772882, 106.766354], [10.772819, 106.766387], [10.772431, 106.766691], [10.772031, 106.767129], [10.771901, 106.766977], [10.771581, 106.767302], [10.771344, 106.767554], [10.771062, 106.767854], [10.770776, 106.768158], [10.770482, 106.768471], [10.770192, 106.76878], [10.769895, 106.769095], [10.768736, 106.767975], [10.767431, 106.766737], [10.767163, 106.767063], [10.768056, 106.76795], [10.768416, 106.768308], [10.769571, 106.769441], [10.770653, 106.77052], [10.77065, 106.77069], [10.770887, 106.770929], [10.771533, 106.771553], [10.771982, 106.772023], [10.772094, 106.772141], [10.772146, 106.77219], [10.772106, 106.772243], [10.772022, 106.772411], [10.771924, 106.772567], [10.771786, 106.772738], [10.771107, 106.773513], [10.770685, 106.774044], [10.770136, 106.774738], [10.770006, 106.774876], [10.769953, 106.774862], [10.769909, 106.77486], [10.769842, 106.774873], [10.769781, 106.774905], [10.769731, 106.774952], [10.769697, 106.775013], [10.769681, 106.77508], [10.769678, 106.775133], [10.769407, 106.775483], [10.769297, 106.775624], [10.769038, 106.775958], [10.768877, 106.776166], [10.768508, 106.776642], [10.768302, 106.777034], [10.768207, 106.777148], [10.768108, 106.777283], [10.768003, 106.777424], [10.767985, 106.777448], [10.767905, 106.777604], [10.767163, 106.778448], [10.766752, 106.778906], [10.766262, 106.779448], [10.766098, 106.779637], [10.765991, 106.77976], [10.764816, 106.781128], [10.764736, 106.781211], [10.764789, 106.781257], [10.764833, 106.781295], [10.76537, 106.781815], [10.765833, 106.782285], [10.765863, 106.782312], [10.765982, 106.782326], [10.766139, 106.782407], [10.766175, 106.782421], [10.766241, 106.782446], [10.766334, 106.782896], [10.766369, 106.782959], [10.766413, 106.783179], [10.766415, 106.783227], [10.766484, 106.78343], [10.76658, 106.783674], [10.766646, 106.783823], [10.766712, 106.783972], [10.766747, 106.78405], [10.766783, 106.784131], [10.766927, 106.784378], [10.766974, 106.784434], [10.767127, 106.784616], [10.767744, 106.785211], [10.767431, 106.785554], [10.767121, 106.785893], [10.766826, 106.786186], [10.766542, 106.7865], [10.766244, 106.786763], [10.765997, 106.786904], [10.765717, 106.786989], [10.765637, 106.787039], [10.765608, 106.787111], [10.765611, 106.787153], [10.765613, 106.787171], [10.766426, 106.788974], [10.766554, 106.789256], [10.766849, 106.789909], [10.766913, 106.790052], [10.767201, 106.79069], [10.767953, 106.792453], [10.768241, 106.793059], [10.768412, 106.793408], [10.768617, 106.793716], [10.768822, 106.793984], [10.769162, 106.794323], [10.769776, 106.794894], [10.769846, 106.794958], [10.770294, 106.795378], [10.770165, 106.795524], [10.770108, 106.795586], [10.768669, 106.797148], [10.768435, 106.797058], [10.768198, 106.797183], [10.768105, 106.797231], [10.767679, 106.797435], [10.767492, 106.797529], [10.766899, 106.796295], [10.766721, 106.79583], [10.766522, 106.795392], [10.766351, 106.795038], [10.766756, 106.794811], [10.767055, 106.794644], [10.767356, 106.794475], [10.767655, 106.794308], [10.768091, 106.794065], [10.767226, 106.792104], [10.767169, 106.791909]],
+                {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;#2563EB&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: false, &quot;fillColor&quot;: &quot;#2563EB&quot;, &quot;fillOpacity&quot;: 0.2, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;noClip&quot;: false, &quot;opacity&quot;: 0.9, &quot;smoothFactor&quot;: 1.0, &quot;stroke&quot;: true, &quot;weight&quot;: 3}
+            ).addTo(map_a6d909ab2f8ce7482b8029ce8996f197);
+        
+    
+            poly_line_334ffe556f5c1ba9a360a9863815c47b.bindTooltip(
+                `&lt;div&gt;
+                     Tuyến di chuyển ICD Trường Thọ -&gt; Cảng Cát Lái
+                 &lt;/div&gt;`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_3f6f2abb1fe771a7e7f3390e5bdacc86 = L.marker(
+                [10.8358, 106.7625],
+                {
+}
+            ).addTo(map_a6d909ab2f8ce7482b8029ce8996f197);
+        
+    
+            var icon_33e30986bb7814dedc2fe8fcc06e84c7 = L.AwesomeMarkers.icon(
+                {
+  &quot;markerColor&quot;: &quot;green&quot;,
+  &quot;iconColor&quot;: &quot;white&quot;,
+  &quot;icon&quot;: &quot;play&quot;,
+  &quot;prefix&quot;: &quot;fa&quot;,
+  &quot;extraClasses&quot;: &quot;fa-rotate-0&quot;,
+}
+            );
+        
+    
+        var popup_1b625c0ae7ea5ee0f7087b9aa2f8e37f = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: false,
+  &quot;closeOnClick&quot;: false,
+});
+
+        
+            
+                var html_64603f658062b126175c4ad8981f449c = $(`&lt;div id=&quot;html_64603f658062b126175c4ad8981f449c&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;&lt;b&gt;ICD TRƯỜNG THỌ&lt;/b&gt;&lt;/div&gt;`)[0];
+                popup_1b625c0ae7ea5ee0f7087b9aa2f8e37f.setContent(html_64603f658062b126175c4ad8981f449c);
+            
+        
+
+        marker_3f6f2abb1fe771a7e7f3390e5bdacc86.bindPopup(popup_1b625c0ae7ea5ee0f7087b9aa2f8e37f)
+        ;
+
+        
+    
+    
+                marker_3f6f2abb1fe771a7e7f3390e5bdacc86.setIcon(icon_33e30986bb7814dedc2fe8fcc06e84c7);
+            
+    
+            var marker_17deb1ea810aceaed564e8636e4ea540 = L.marker(
+                [10.7672, 106.7919],
+                {
+}
+            ).addTo(map_a6d909ab2f8ce7482b8029ce8996f197);
+        
+    
+            var icon_107cd4109dc3670bc68a75429c8fec99 = L.AwesomeMarkers.icon(
+                {
+  &quot;markerColor&quot;: &quot;red&quot;,
+  &quot;iconColor&quot;: &quot;white&quot;,
+  &quot;icon&quot;: &quot;flag-checkered&quot;,
+  &quot;prefix&quot;: &quot;fa&quot;,
+  &quot;extraClasses&quot;: &quot;fa-rotate-0&quot;,
+}
+            );
+        
+    
+        var popup_ed0477850cc6922140a01a8413f63c1b = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: false,
+  &quot;closeOnClick&quot;: false,
+});
+
+        
+            
+                var html_2554975d211f46eb21d7638ee91b84f0 = $(`&lt;div id=&quot;html_2554975d211f46eb21d7638ee91b84f0&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;&lt;b&gt;CẢNG CÁT LÁI&lt;/b&gt;&lt;/div&gt;`)[0];
+                popup_ed0477850cc6922140a01a8413f63c1b.setContent(html_2554975d211f46eb21d7638ee91b84f0);
+            
+        
+
+        marker_17deb1ea810aceaed564e8636e4ea540.bindPopup(popup_ed0477850cc6922140a01a8413f63c1b)
+        ;
+
+        
+    
+    
+                marker_17deb1ea810aceaed564e8636e4ea540.setIcon(icon_107cd4109dc3670bc68a75429c8fec99);
+            
+    
+            var marker_2187023650663d5abfbf4553497df52f = L.marker(
+                [10.7788, 106.7568],
+                {
+}
+            ).addTo(map_a6d909ab2f8ce7482b8029ce8996f197);
+        
+    
+            var icon_d232acea8d3f0110687c4115cb882b97 = L.AwesomeMarkers.icon(
+                {
+  &quot;markerColor&quot;: &quot;orange&quot;,
+  &quot;iconColor&quot;: &quot;white&quot;,
+  &quot;icon&quot;: &quot;exclamation-triangle&quot;,
+  &quot;prefix&quot;: &quot;fa&quot;,
+  &quot;extraClasses&quot;: &quot;fa-rotate-0&quot;,
+}
+            );
+        
+    
+        var popup_c1cb78d434dea82691837e6d3b2ac2ea = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: false,
+  &quot;closeOnClick&quot;: false,
+});
+
+        
+            
+                var html_0d328d90f56fc2da7b1d7ab79ca0ded6 = $(`&lt;div id=&quot;html_0d328d90f56fc2da7b1d7ab79ca0ded6&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;&lt;b&gt;⚠️ SỰ CỐ TẠI ĐƯỜNG ĐỒNG VĂN CỐNG&lt;/b&gt;&lt;/div&gt;`)[0];
+                popup_c1cb78d434dea82691837e6d3b2ac2ea.setContent(html_0d328d90f56fc2da7b1d7ab79ca0ded6);
+            
+        
+
+        marker_2187023650663d5abfbf4553497df52f.bindPopup(popup_c1cb78d434dea82691837e6d3b2ac2ea)
+        ;
+
+        
+    
+    
+                marker_2187023650663d5abfbf4553497df52f.setIcon(icon_d232acea8d3f0110687c4115cb882b97);
+            
+&lt;/script&gt;
+&lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div></div>
+            
+            <!-- CỘT BÊN PHẢI GIÃN ĐỀU 100% CHIỀU CAO -->
+            <div class="sidebar-right">
+                <div class="info-box box-top">
+                    <h4>📍 VỊ TRÍ CHI TIẾT</h4>
+                    <p><b>🟢 ICD Trường Thọ:</b><br>Số 1A Đường số 9, P. Trường Thọ, TP. Thủ Đức, TP.HCM</p>
+                    <p><b>🔴 Cảng Cát Lái:</b><br>Số 1295B Nguyễn Thị Định, P. Cát Lái, TP. Thủ Đức, TP.HCM</p>
+                    <hr style="border:0; border-top:1px solid #e2e8f0; margin: 4px 0;">
+                    <p>📏 <b>Khoảng cách:</b> ~12 - 14 km</p>
+                    <p>⏱️ <b>Thời gian di chuyển:</b> 50 - 60 phút (không kẹt xe)</p>
+                </div>
+                
+                <div class="info-box box-bottom">
+                    <h4>📅 KẾ HOẠCH LỊCH TRÌNH & SỰ CỐ</h4>
+                    <p>⏰ <b>Xe rời ICD:</b> 15/10 - 08:15</p>
+                    <p>⏰ <b>ETA Cát Lái:</b> 15/10 - 09:30 → <span class="warning-text">11:45 (Trễ do sự cố)</span></p>
+                    <p>⏰ <b>Closing Time:</b> 15/10 - 13:00</p>
+                    <p>⏰ <b>Gate Closing:</b> 15/10 - 14:00</p>
+                    <p>⏰ <b>ETD Tàu:</b> 15/10 - 18:00</p>
+                    <hr style="border:0; border-top:1px solid #e2e8f0; margin: 4px 0;">
+                    <p class="warning-text">⚠️ <b>THỂ SỰ CỐ 1 (15/10 - ĐƯỜNG BỘ):</b></p>
+                    <p>• 09:00: Tai nạn giao thông trên đường Đồng Văn Cống ➔ ETA Cát Lái trễ từ 09:30 thành 11:45.</p>
+                    <p>• 09:20: Xe đầu kéo báo lỗi kỹ thuật (Chờ xe thay thế 60 phút).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
