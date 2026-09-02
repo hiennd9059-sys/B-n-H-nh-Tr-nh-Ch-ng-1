@@ -1,0 +1,1981 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Bản Đồ 2 - Tuyến Đường Biển Quốc Tế</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 10px;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8fafc;
+            overflow: hidden;
+        }
+
+        .header { 
+            text-align: center; 
+            background-color: #0b2545; 
+            color: white; 
+            padding: 10px; 
+            border-radius: 8px; 
+            margin-bottom: 10px; 
+        }
+        .header h2 { margin: 0; font-size: 18px; letter-spacing: 0.5px; }
+        .legend-bar { display: flex; justify-content: center; gap: 30px; margin-top: 6px; font-size: 12px; }
+        
+        .section-card { 
+            background: white; 
+            border-radius: 8px; 
+            border: 1px solid #cbd5e1; 
+            padding: 10px; 
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            height: calc(100vh - 90px);
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+        }
+        .section-title { 
+            background-color: #0b2545; 
+            color: white; 
+            display: inline-block; 
+            padding: 4px 12px; 
+            font-weight: bold; 
+            font-size: 13px; 
+            border-radius: 4px; 
+            margin-bottom: 10px; 
+            align-self: flex-start;
+        }
+        
+        .grid-container { 
+            display: grid; 
+            grid-template-columns: 1fr 380px; 
+            gap: 12px; 
+            flex: 1;
+            min-height: 0;
+        }
+
+        .sidebar-right {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            height: 100%;
+            min-height: 0;
+        }
+        
+        .info-box { 
+            background: #f8fafc; 
+            border: 1px solid #e2e8f0; 
+            border-radius: 6px; 
+            padding: 12px 14px; 
+            font-size: 13px; 
+            line-height: 1.4; 
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-sizing: border-box;
+        }
+        
+        .box-top { flex: 2; }
+        .box-bottom { flex: 3; }
+
+        .info-box h4 { margin: 0 0 6px 0; color: #1e293b; border-bottom: 1px solid #e2e8f0; padding-bottom: 6px; font-size: 14px; }
+        .info-box p { margin: 2px 0; }
+        
+        .map-frame { 
+            width: 100%; 
+            height: 100%; 
+            border-radius: 6px; 
+            overflow: hidden; 
+            border: 1px solid #cbd5e1; 
+            position: relative; 
+        }
+        .warning-text { color: #dc2626; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h2>TUYẾN VẬN CHUYỂN: ICD TRƯỜNG THỌ → CẢNG CÁT LÁI → HAMBURG, ĐỨC</h2>
+        <div class="legend-bar">
+            <span><i class="fa-solid fa-truck" style="color: #4ade80;"></i> <b>ĐƯỜNG BỘ:</b> ICD Trường Thọ → Cảng Cát Lái</span>
+            <span><i class="fa-solid fa-ship" style="color: #60a5fa;"></i> <b>ĐƯỜNG BIỂN:</b> Cảng Cát Lái → Hamburg</span>
+            <span><i class="fa-solid fa-location-dot" style="color: #f87171;"></i> <b>ĐÍCH ĐẾN:</b> Port of Hamburg, Germany</span>
+        </div>
+    </div>
+
+    <div class="section-card">
+        <div class="section-title">2. CHẶNG ĐƯỜNG BIỂN QUỐC TẾ: CẢNG CÁT LÁI → HAMBURG, ĐỨC</div>
+        <div class="grid-container">
+            <!-- BẢN ĐỒ FULL BÊN TRÁI -->
+            <div class="map-frame"><div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><span style="color:#565656">Make this Notebook Trusted to load map: File -> Trust Notebook</span><iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    
+    &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+    
+    &lt;style&gt;
+        /* Nhích bảng sự cố lên xíu và dịch sát vào ghim vàng */
+        .leaflet-popup:has(.singapore-popup) {
+            left: 25px !important;         /* Khoảng cách sát lề ghim vàng */
+            top: -10px !important;         /* Nhích lên đúng tầm trung tâm ghim vàng */
+            bottom: auto !important;
+        }
+        
+        /* Mũi nhọn bên trái chỉ thẳng vào tâm ghim vàng */
+        .leaflet-popup:has(.singapore-popup) .leaflet-popup-tip-container {
+            left: -12px !important;
+            top: 50% !important;
+            bottom: auto !important;
+            margin-top: -10px !important;
+            margin-left: 0 !important;
+            transform: rotate(90deg) !important;
+        }
+    &lt;/style&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css&quot;/&gt;
+    
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
+            &lt;style&gt;
+                #map_9c28d9936fa3a952fd23d4bb96264c78 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            &lt;/style&gt;
+
+            &lt;style&gt;html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            &lt;/style&gt;
+
+            &lt;style&gt;#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            &lt;/style&gt;
+
+            &lt;script&gt;
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            &lt;/script&gt;
+
+        
+&lt;/head&gt;
+&lt;body&gt;
+    
+    
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_9c28d9936fa3a952fd23d4bb96264c78&quot; &gt;&lt;/div&gt;
+        
+&lt;/body&gt;
+&lt;script&gt;
+    
+    
+            var map_9c28d9936fa3a952fd23d4bb96264c78 = L.map(
+                &quot;map_9c28d9936fa3a952fd23d4bb96264c78&quot;,
+                {
+                    center: [15.0, 85.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  &quot;zoom&quot;: 3,
+  &quot;zoomControl&quot;: true,
+  &quot;preferCanvas&quot;: false,
+  &quot;zoomSnap&quot;: 0.25,
+  &quot;zoomDelta&quot;: 0.25,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_51941a4500f5fd8dce75a46a28ab5932 = L.tileLayer(
+                &quot;https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png&quot;,
+                {
+  &quot;minZoom&quot;: 0,
+  &quot;maxZoom&quot;: 20,
+  &quot;maxNativeZoom&quot;: 20,
+  &quot;noWrap&quot;: false,
+  &quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\&quot;https://carto.com/attributions\&quot;\u003eCARTO\u003c/a\u003e&quot;,
+  &quot;subdomains&quot;: &quot;abcd&quot;,
+  &quot;detectRetina&quot;: false,
+  &quot;tms&quot;: false,
+  &quot;opacity&quot;: 1,
+}
+
+            );
+        
+    
+            tile_layer_51941a4500f5fd8dce75a46a28ab5932.addTo(map_9c28d9936fa3a952fd23d4bb96264c78);
+        
+    
+            var poly_line_5e326ccce5db338909f8578710cb8a00 = L.polyline(
+                [[10.7672, 106.7919], [10.65, 106.85], [10.35, 107.03], [8.5, 106.0], [4.0, 104.5], [1.2644, 103.84], [2.5, 101.5], [5.8, 95.3], [6.0, 80.0], [11.8, 51.5], [12.58, 43.32], [15.0, 41.8], [27.8, 34.2], [29.93, 32.55], [30.58, 32.27], [36.0, 15.0], [35.95, -5.6], [43.5, -9.5], [50.8, 1.2], [53.5461, 9.966]],
+                {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;#0284C7&quot;, &quot;dashArray&quot;: &quot;8, 8&quot;, &quot;dashOffset&quot;: null, &quot;fill&quot;: false, &quot;fillColor&quot;: &quot;#0284C7&quot;, &quot;fillOpacity&quot;: 0.2, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;noClip&quot;: false, &quot;opacity&quot;: 0.9, &quot;smoothFactor&quot;: 1.0, &quot;stroke&quot;: true, &quot;weight&quot;: 4}
+            ).addTo(map_9c28d9936fa3a952fd23d4bb96264c78);
+        
+    
+            var marker_64251c7d12485d1e9c8405634a95492c = L.marker(
+                [10.7672, 106.7919],
+                {
+}
+            ).addTo(map_9c28d9936fa3a952fd23d4bb96264c78);
+        
+    
+            var icon_67c86b14e5be02a4d1d553d048a6b6fe = L.AwesomeMarkers.icon(
+                {
+  &quot;markerColor&quot;: &quot;red&quot;,
+  &quot;iconColor&quot;: &quot;white&quot;,
+  &quot;icon&quot;: &quot;ship&quot;,
+  &quot;prefix&quot;: &quot;fa&quot;,
+  &quot;extraClasses&quot;: &quot;fa-rotate-0&quot;,
+}
+            );
+        
+    
+        var popup_76e850cdc53ac23e4413d6e64fe7f53a = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: false,
+  &quot;closeOnClick&quot;: false,
+});
+
+        
+            
+                var html_fca534a73a05e09d931f9cacd6b7c091 = $(`&lt;div id=&quot;html_fca534a73a05e09d931f9cacd6b7c091&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;&lt;b&gt;CẢNG CÁT LÁI (VIỆT NAM)&lt;/b&gt;&lt;/div&gt;`)[0];
+                popup_76e850cdc53ac23e4413d6e64fe7f53a.setContent(html_fca534a73a05e09d931f9cacd6b7c091);
+            
+        
+
+        marker_64251c7d12485d1e9c8405634a95492c.bindPopup(popup_76e850cdc53ac23e4413d6e64fe7f53a)
+        ;
+
+        
+    
+    
+                marker_64251c7d12485d1e9c8405634a95492c.setIcon(icon_67c86b14e5be02a4d1d553d048a6b6fe);
+            
+    
+            var marker_0d1746e0a9af6fe5f2bf9c03c891b447 = L.marker(
+                [1.2644, 103.84],
+                {
+}
+            ).addTo(map_9c28d9936fa3a952fd23d4bb96264c78);
+        
+    
+            var icon_0a322d2508113fd36749c652bd2e010c = L.AwesomeMarkers.icon(
+                {
+  &quot;markerColor&quot;: &quot;orange&quot;,
+  &quot;iconColor&quot;: &quot;white&quot;,
+  &quot;icon&quot;: &quot;exclamation-triangle&quot;,
+  &quot;prefix&quot;: &quot;fa&quot;,
+  &quot;extraClasses&quot;: &quot;fa-rotate-0&quot;,
+}
+            );
+        
+    
+        var popup_9d5fb920901262edf93acba86bc33e06 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: false,
+  &quot;closeOnClick&quot;: false,
+});
+
+        
+            
+                var html_8ffca00d374fc61ae2a9686d2953a689 = $(`&lt;div id=&quot;html_8ffca00d374fc61ae2a9686d2953a689&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;&lt;div class=&quot;singapore-popup&quot;&gt;&lt;b&gt;⚠️ SỰ CỐ TẠI CẢNG SINGAPORE&lt;/b&gt;&lt;/div&gt;`)[0];
+                popup_9d5fb920901262edf93acba86bc33e06.setContent(html_8ffca00d374fc61ae2a9686d2953a689);
+            
+        
+
+        marker_0d1746e0a9af6fe5f2bf9c03c891b447.bindPopup(popup_9d5fb920901262edf93acba86bc33e06)
+        ;
+
+        
+    
+    
+                marker_0d1746e0a9af6fe5f2bf9c03c891b447.setIcon(icon_0a322d2508113fd36749c652bd2e010c);
+            
+    
+            var marker_566bd43fb7b38dc5b81924e82b4f494d = L.marker(
+                [53.5461, 9.966],
+                {
+}
+            ).addTo(map_9c28d9936fa3a952fd23d4bb96264c78);
+        
+    
+            var icon_f8ad99b9f11ba48005f14b4a9feae7a1 = L.AwesomeMarkers.icon(
+                {
+  &quot;markerColor&quot;: &quot;red&quot;,
+  &quot;iconColor&quot;: &quot;white&quot;,
+  &quot;icon&quot;: &quot;star&quot;,
+  &quot;prefix&quot;: &quot;fa&quot;,
+  &quot;extraClasses&quot;: &quot;fa-rotate-0&quot;,
+}
+            );
+        
+    
+        var popup_708bdafb9fba0f96abfa121a75b828e3 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: false,
+  &quot;closeOnClick&quot;: false,
+});
+
+        
+            
+                var html_64ec97c9f3ac69e03f21b479ddef0d61 = $(`&lt;div id=&quot;html_64ec97c9f3ac69e03f21b479ddef0d61&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;&lt;b&gt;PORT OF HAMBURG (ĐỨC)&lt;/b&gt;&lt;/div&gt;`)[0];
+                popup_708bdafb9fba0f96abfa121a75b828e3.setContent(html_64ec97c9f3ac69e03f21b479ddef0d61);
+            
+        
+
+        marker_566bd43fb7b38dc5b81924e82b4f494d.bindPopup(popup_708bdafb9fba0f96abfa121a75b828e3)
+        ;
+
+        
+    
+    
+                marker_566bd43fb7b38dc5b81924e82b4f494d.setIcon(icon_f8ad99b9f11ba48005f14b4a9feae7a1);
+            
+&lt;/script&gt;
+&lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div></div>
+            
+            <!-- CỘT BÊN PHẢI CHỨA CẢ 2 KHUNG THÔNG TIN -->
+            <div class="sidebar-right">
+                <div class="info-box box-top">
+                    <h4>📍 VỊ TRÍ CẢNG & HẢI TRÌNH</h4>
+                    <p><b>🔴 Cảng Cát Lái:</b><br>Cảng xếp hàng (POL) - TP. Thủ Đức, Việt Nam</p>
+                    <p><b>🟠 Cảng Singapore:</b><br>Trạm chuyển tải (Transshipment Port)</p>
+                    <p><b>🏁 Port of Hamburg:</b><br>Cảng dỡ hàng (POD) - Đức</p>
+                    <hr style="border:0; border-top:1px solid #e2e8f0; margin: 4px 0;">
+                    <p>📏 <b>Chiều dài hải trình:</b> ~9,100 hải lý (~17,000 km)</p>
+                    <p>⏳ <b>Transit time dự kiến:</b> 25 - 28 ngày</p>
+                </div>
+                
+                <div class="info-box box-bottom">
+                    <h4>📅 KẾ HOẠCH LỊCH TRÌNH & SỰ CỐ</h4>
+                    <p>🛫 <b>ETD Cát Lái:</b> 15/10 - 18:00</p>
+                    <p>🛬 <b>ETA Hamburg (Kế hoạch):</b> 09/11</p>
+                    <p>🛬 <b>ETA Hamburg (Thực tế):</b> <span class="warning-text">13/11 (Trễ 4 ngày)</span></p>
+                    <p>⏰ <b>Hạn giao hàng hợp đồng:</b> 11/11</p>
+                    <hr style="border:0; border-top:1px solid #e2e8f0; margin: 4px 0;">
+                    <p class="warning-text">⚠️ <b>THỂ SỰ CỐ 2 (26/10 - SINGAPORE):</b></p>
+                    <p>• Thời tiết xấu làm tàu mẹ trễ chuyến ➔ Container bị <b>rớt tàu nối chuyến</b> tại Singapore.</p>
+                    <p>• Thời gian lưu bãi chờ tàu tiếp theo: 26/10 ➔ 30/10.</p>
+                    <p class="warning-text">• Nguy cơ phạt hợp đồng quá hạn: 2,000 USD.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sơ Đồ Tuyến Vận Chuyển 3 Chặng</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; }
+        body { background-color: #f0f2f5; padding: 15px; color: #333; }
+        .container { max-width: 1200px; margin: 0 auto; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        .header { text-align: center; margin-bottom: 20px; }
+        .header h1 { color: #002b66; font-size: 22px; text-transform: uppercase; margin-bottom: 10px; font-weight: 800; }
+        .legend-bar { display: flex; justify-content: center; gap: 20px; font-size: 13px; font-weight: 600; flex-wrap: wrap; }
+        .legend-item { display: flex; align-items: center; gap: 6px; }
+        .dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+        .section-card { border: 1px solid #d9d9d9; border-radius: 8px; margin-bottom: 20px; overflow: hidden; background: #fafafa; }
+        .section-header { background: #002b66; color: white; padding: 8px 15px; font-size: 14px; font-weight: bold; text-transform: uppercase; }
+        .map-wrapper { position: relative; height: 380px; width: 100%; }
+        .map-container { height: 100%; width: 100%; z-index: 1; }
+        .overlay-box { position: absolute; z-index: 1000; background: rgba(255, 255, 255, 0.95); padding: 12px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.2); font-size: 12px; line-height: 1.5; }
+        .left-box { top: 15px; left: 15px; width: 280px; }
+        .right-box { top: 15px; right: 15px; width: 270px; }
+        .box-title { font-weight: bold; color: #002b66; border-bottom: 2px solid #002b66; padding-bottom: 4px; margin-bottom: 8px; }
+        .info-item { margin-bottom: 6px; }
+        .info-table { width: 100%; border-collapse: collapse; margin-top: 5px; }
+        .info-table th, .info-table td { padding: 4px 6px; text-align: left; border-bottom: 1px solid #eee; }
+        .info-table th { background: #f0f4f8; color: #002b66; }
+        .footer-note { background: #e6f0fa; border-left: 4px solid #002b66; padding: 12px; border-radius: 4px; font-size: 13px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>TUYẾN VẬN CHUYỂN: ICD TRƯỜNG THỌ ➔ CẢNG CÁT LÁI ➔ CẢNG SINGAPORE ➔ HAMBURG, ĐỨC</h1>
+        <div class="legend-bar">
+            <div class="legend-item"><span class="dot" style="background:#27ae60;"></span> 🚚 ĐƯỜNG BỘ: ICD Trường Thọ ➔ Cát Lái</div>
+            <div class="legend-item"><span class="dot" style="background:#2980b9;"></span> 🚢 FEEDER: Cát Lái ➔ Singapore</div>
+            <div class="legend-item"><span class="dot" style="background:#8e44ad;"></span> 🌐 TÀU MẸ: Singapore ➔ Hamburg</div>
+        </div>
+    </div>
+
+    <!-- CHẶNG 1 -->
+    <div class="section-card">
+        <div class="section-header">1. CHẶNG ĐƯỜNG BỘ: ICD TRƯỜNG THỌ ➔ CẢNG CÁT LÁI</div>
+        <div class="map-wrapper">
+            <div id="map1" class="map-container"></div>
+            <div class="overlay-box left-box">
+                <div class="box-title">📍 Địa Điểm & Thông Số</div>
+                <div class="info-item"><b>🟢 Nơi đi:</b> ICD Trường Thọ (Số 1A Đường 12, P. Trường Thọ, TP. Thủ Đức)</div>
+                <div class="info-item"><b>🔴 Nơi đến:</b> Cảng Cát Lái (Số 1295B Nguyễn Thị Định, P. Cát Lái, TP. Thủ Đức)</div>
+                <hr style="margin: 6px 0;">
+                <div class="info-item">📏 <b>Khoảng cách:</b> ~10 – 15 km</div>
+                <div class="info-item">⏱ <b>Thời gian di chuyển:</b> ~36 – 44 phút</div>
+            </div>
+            <div class="overlay-box right-box">
+                <div class="box-title">📅 Kế Hoạch Giao Nhận Đường Bộ</div>
+                <table class="info-table">
+                    <tr><td><b>Án Lệ ICD</b></td><td>12/10 – 08:00</td></tr><tr><td><b>ETA Cát Lái</b></td><td>12/10 – 09:30</td></tr><tr><td><b>Closing Time</b></td><td>12/10 – 15:00</td></tr><tr><td><b>Gate Closing</b></td><td>12/10 – 17:00</td></tr><tr><td><b>ETD Xe</b></td><td>12/10 – 08:00</td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- CHẶNG 2 -->
+    <div class="section-card">
+        <div class="section-header" style="background: #1976D2;">2. CHẶNG ĐƯỜNG BIỂN 1 (FEEDER): CẢNG CÁT LÁI ➔ CẢNG SINGAPORE</div>
+        <div class="map-wrapper">
+            <div id="map2" class="map-container"></div>
+            <div class="overlay-box left-box">
+                <div class="box-title">🚢 Hải Trình Feeder</div>
+                <div class="info-item"><b>🟢 Cảng đi (POL):</b> Cảng Cát Lái (TP.HCM, VN)</div>
+                <div class="info-item"><b>🟡 Cảng đến (HUB):</b> Cảng Singapore (Transshipment)</div>
+                <hr style="margin: 6px 0;">
+                <div class="info-item">🧭 <b>Tuyến:</b> Biển Đông ➔ Eo biển Malacca</div>
+                <div class="info-item">⏱ <b>Thời gian (T/S Time):</b> ~2 – 3 ngày</div>
+            </div>
+            <div class="overlay-box right-box">
+                <div class="box-title">📅 Lịch Trình Tàu Feeder</div>
+                <table class="info-table">
+                    <tr><td><b>Tàu Feeder</b></td><td>Vessel A / Voy 001S</td></tr><tr><td><b>ETD Cát Lái</b></td><td>13/10 – 18:00</td></tr><tr><td><b>ETA Singapore</b></td><td>16/10 – 06:00</td></tr><tr><td><b>Loại hình</b></td><td>Chuyển tải (Transshipment)</td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- CHẶNG 3 -->
+    <div class="section-card">
+        <div class="section-header" style="background: #4A148C;">3. CHẶNG ĐƯỜNG BIỂN 2 (OCEAN VESSEL): CẢNG SINGAPORE ➔ CẢNG HAMBURG (ĐỨC)</div>
+        <div class="map-wrapper">
+            <div id="map3" class="map-container"></div>
+            <div class="overlay-box left-box">
+                <div class="box-title">🌐 Hải Trình Quốc Tế</div>
+                <div class="info-item"><b>🟡 Cảng đi (POL):</b> Cảng Singapore</div>
+                <div class="info-item"><b>🔴 Cảng đích (POD):</b> Port of Hamburg (Đức)</div>
+                <hr style="margin: 6px 0;">
+                <div class="info-item">🧭 <b>Hành trình:</b> Singapore ➔ Ấn Độ Dương ➔ Biển Đỏ ➔ Kênh Suez ➔ Địa Trung Hải ➔ Hamburg</div>
+                <div class="info-item">⏱ <b>Transit Time:</b> ~23 – 25 ngày</div>
+            </div>
+            <div class="overlay-box right-box">
+                <div class="box-title">📅 Thông Tin Tàu Mẹ (Mainline)</div>
+                <table class="info-table">
+                    <tr><td><b>Hãng tàu / Tàu</b></td><td>Hapag-Lloyd / Ocean Express</td></tr><tr><td><b>ETD Singapore</b></td><td>18/10 – 12:00</td></tr><tr><td><b>ETA Hamburg</b></td><td>10/11 – 15:00</td></tr><tr><td><b>Địa điểm giao</b></td><td>Port of Hamburg, Germany</td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-note">
+        <b>📋 BỐI CẢNH:</b> Đội ngũ Điều độ & OOC của ABC Logistics điều phối container 40HC từ ICD Trường Thọ ➔ Cảng Cát Lái ➔ Cảng Singapore ➔ Cảng Hamburg (Đức), bảo đảm giao hàng đúng kế hoạch với chi phí tối ưu nhất.
+    </div>
+</div>
+
+<script>
+    const icdCoords = [10.8252, 106.7601];
+    const catLaiCoords = [10.7628, 106.7876];
+    const singaporeCoords = [1.2644, 103.84];
+    const hamburgCoords = [53.5461, 9.966];
+
+    // MAP 1: Đường bộ
+    const map1 = L.map('map1').setView([10.795, 106.775], 12);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap' }).addTo(map1);
+    const roadRoute = [icdCoords, [10.8100, 106.7620], [10.7850, 106.7690], [10.7750, 106.7800], catLaiCoords];
+    L.polyline(roadRoute, { color: '#27ae60', weight: 5 }).addTo(map1);
+    L.marker(icdCoords).addTo(map1).bindPopup("<b>ICD Trường Thọ</b>");
+    L.marker(catLaiCoords).addTo(map1).bindPopup("<b>Cảng Cát Lái</b>");
+
+    // MAP 2: Feeder
+    const map2 = L.map('map2').setView([6.0, 105.0], 5);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap' }).addTo(map2);
+    const feederRoute = [catLaiCoords, [8.5, 106.5], [4.5, 104.8], singaporeCoords];
+    L.polyline(feederRoute, { color: '#2980b9', weight: 4 }).addTo(map2);
+    L.marker(catLaiCoords).addTo(map2).bindPopup("<b>Cảng Cát Lái (Việt Nam)</b>");
+    L.marker(singaporeCoords).addTo(map2).bindPopup("<b>Cảng Singapore (HUB)</b>");
+
+    // MAP 3: Mainline
+    const map3 = L.map('map3').setView([20.0, 50.0], 2);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap' }).addTo(map3);
+    const mainlineRoute = [
+        singaporeCoords, [6.0, 95.0], [11.8000, 51.2000], [29.9000, 32.5000],
+        [36.0000, 14.5000], [36.0000, -5.3000], [50.5000, 0.0000], hamburgCoords
+    ];
+    L.polyline(mainlineRoute, { color: '#8e44ad', weight: 3, dashArray: '6, 6' }).addTo(map3);
+    L.marker(singaporeCoords).addTo(map3).bindPopup("<b>Cảng Singapore</b>");
+    L.marker(hamburgCoords).addTo(map3).bindPopup("<b>Cảng Hamburg (Đức)</b>");
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Tuyến Vận Chuyển Logistics Chi Tiết</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 15px; background-color: #f8fafc; }
+        .header { text-align: center; background-color: #0b2545; color: white; padding: 12px; border-radius: 8px; margin-bottom: 12px; }
+        .header h2 { margin: 0; font-size: 20px; letter-spacing: 0.5px; }
+        .legend-bar { display: flex; justify-content: center; gap: 40px; margin-top: 8px; font-size: 13px; }
+        
+        .section-card { background: white; border-radius: 8px; border: 1px solid #cbd5e1; padding: 12px; margin-bottom: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .section-title { background-color: #0b2545; color: white; display: inline-block; padding: 4px 12px; font-weight: bold; font-size: 13px; border-radius: 4px; margin-bottom: 10px; }
+        
+        .grid-container { display: grid; grid-template-columns: 280px 1fr 320px; gap: 12px; height: 380px; }
+        .grid-sea { display: grid; grid-template-columns: 1fr 320px; gap: 12px; height: 320px; }
+        
+        .info-box { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 10px; font-size: 12px; line-height: 1.5; overflow-y: auto; }
+        .info-box h4 { margin: 0 0 6px 0; color: #1e293b; border-bottom: 1px solid #e2e8f0; padding-bottom: 4px; }
+        
+        .map-frame { width: 100%; height: 100%; border-radius: 6px; overflow: hidden; border: 1px solid #cbd5e1; position: relative; }
+        .warning-text { color: #dc2626; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h2>TUYẾN VẬN CHUYỂN: ICD TRƯỜNG THỌ → CẢNG CÁT LÁI → HAMBURG, ĐỨC</h2>
+        <div class="legend-bar">
+            <span><i class="fa-solid fa-truck" style="color: #4ade80;"></i> <b>ĐƯỜNG BỘ:</b> ICD Trường Thọ → Cảng Cát Lái</span>
+            <span><i class="fa-solid fa-ship" style="color: #60a5fa;"></i> <b>ĐƯỜNG BIỂN:</b> Cảng Cát Lái → Hamburg</span>
+            <span><i class="fa-solid fa-location-dot" style="color: #f87171;"></i> <b>ĐÍCH ĐẾN:</b> Port of Hamburg, Germany</span>
+        </div>
+    </div>
+
+    <div class="section-card">
+        <div class="section-title">1. CHẶNG ĐƯỜNG BỘ NỘI ĐỊA: ICD TRƯỜNG THỌ → CẢNG CÁT LÁI</div>
+        <div class="grid-container">
+            <div class="info-box">
+                <h4>📍 VỊ TRÍ CHI TIẾT</h4>
+                <p><b>🟢 ICD Trường Thọ:</b><br>Số 1A Đường số 9, P. Trường Thọ, TP. Thủ Đức, TP.HCM</p>
+                <p><b>🔴 Cảng Cát Lái:</b><br>Số 1295B Nguyễn Thị Định, P. Cát Lái, TP. Thủ Đức, TP.HCM</p>
+                <hr style="border:0; border-top:1px solid #e2e8f0;">
+                <p>📏 <b>Khoảng cách:</b> ~12 - 14 km<br>⏱️ <b>Thời gian di chuyển:</b> 50 - 60 phút (không kẹt xe)</p>
+            </div>
+            
+            <div class="map-frame"><div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><span style="color:#565656">Make this Notebook Trusted to load map: File -> Trust Notebook</span><iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    
+    &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css&quot;/&gt;
+    
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
+            &lt;style&gt;
+                #map_abdf31f256d8376d68a7bbd48d34ec48 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            &lt;/style&gt;
+
+            &lt;style&gt;html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            &lt;/style&gt;
+
+            &lt;style&gt;#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            &lt;/style&gt;
+
+            &lt;script&gt;
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            &lt;/script&gt;
+
+        
+&lt;/head&gt;
+&lt;body&gt;
+    
+    
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/Turf.js/6.5.0/turf.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+document.addEventListener(&quot;DOMContentLoaded&quot;, function() {
+    setTimeout(function() {
+        var coords = [[10.835828, 106.762613], [10.835944, 106.762583], [10.835986, 106.762538], [10.836584, 106.762281], [10.836351, 106.761874], [10.836502, 106.76181], [10.836695, 106.761723], [10.836811, 106.761645], [10.836895, 106.761548], [10.83702, 106.761328], [10.83708, 106.76125], [10.836909, 106.761126], [10.836876, 106.7611], [10.836825, 106.761073], [10.836812, 106.76107], [10.836801, 106.761074], [10.836778, 106.761092], [10.836771, 106.761099], [10.836762, 106.761101], [10.836755, 106.761095], [10.836695, 106.761018], [10.836656, 106.760994], [10.836625, 106.760972], [10.836573, 106.760932], [10.836544, 106.760907], [10.836533, 106.760899], [10.836525, 106.760901], [10.836512, 106.760909], [10.836482, 106.760938], [10.83647, 106.760947], [10.836456, 106.760946], [10.836445, 106.760934], [10.836429, 106.760911], [10.836414, 106.760894], [10.8364, 106.760878], [10.836322, 106.760756], [10.83622, 106.760632], [10.83606, 106.760718], [10.835943, 106.760838], [10.835935, 106.760875], [10.836027, 106.76104], [10.836023, 106.761058], [10.835911, 106.76109], [10.835794, 106.761109], [10.835691, 106.761056], [10.835427, 106.761022], [10.835336, 106.760959], [10.834809, 106.76098], [10.834692, 106.761035], [10.834771, 106.76127], [10.834787, 106.761473], [10.834787, 106.761677], [10.83477, 106.761741], [10.834739, 106.761854], [10.834287, 106.762588], [10.834121, 106.762855], [10.834096, 106.7629], [10.834083, 106.763029], [10.834124, 106.76326], [10.834186, 106.763469], [10.834352, 106.763879], [10.834423, 106.764054], [10.834629, 106.764476], [10.834737, 106.764727], [10.83482, 106.76495], [10.835307, 106.765221], [10.835753, 106.76547], [10.83571, 106.765516], [10.835656, 106.765575], [10.835586, 106.765618], [10.835538, 106.765701], [10.835481, 106.765796], [10.835268, 106.765677], [10.833939, 106.764932], [10.833083, 106.764463], [10.832172, 106.763956], [10.830865, 106.763229], [10.827534, 106.76138], [10.82691, 106.761034], [10.82664, 106.760885], [10.826509, 106.760807], [10.826327, 106.760703], [10.825208, 106.760053], [10.824944, 106.759901], [10.824631, 106.759729], [10.824216, 106.759502], [10.823477, 106.759168], [10.822693, 106.758865], [10.822552, 106.758809], [10.822203, 106.758723], [10.821991, 106.75867], [10.821344, 106.758517], [10.82038, 106.758288], [10.819789, 106.758175], [10.819707, 106.758161], [10.819628, 106.758148], [10.819325, 106.758152], [10.818691, 106.75803], [10.818474, 106.757911], [10.818413, 106.757899], [10.818362, 106.757889], [10.817752, 106.7578], [10.817165, 106.757682], [10.815926, 106.75742], [10.810899, 106.756482], [10.810141, 106.756299], [10.809985, 106.756249], [10.8099, 106.756223], [10.809734, 106.756169], [10.809498, 106.756078], [10.809204, 106.755953], [10.808883, 106.755819], [10.808609, 106.755697], [10.808383, 106.755594], [10.808217, 106.755506], [10.808056, 106.755426], [10.807782, 106.755275], [10.80769, 106.755225], [10.807605, 106.755178], [10.80758, 106.755114], [10.807431, 106.754945], [10.807052, 106.754513], [10.806173, 106.753612], [10.805709, 106.753117], [10.805571, 106.752982], [10.80546, 106.752896], [10.805363, 106.75285], [10.805267, 106.752828], [10.805148, 106.752818], [10.805014, 106.752845], [10.804858, 106.752919], [10.804651, 106.753056], [10.804296, 106.753304], [10.804172, 106.753375], [10.804056, 106.753433], [10.803913, 106.753473], [10.803606, 106.753552], [10.803436, 106.753548], [10.803109, 106.753501], [10.802875, 106.753436], [10.802785, 106.753411], [10.802027, 106.753287], [10.797128, 106.752407], [10.795831, 106.75217], [10.79313, 106.751669], [10.792773, 106.751607], [10.792577, 106.751576], [10.792367, 106.751542], [10.792349, 106.751473], [10.792339, 106.751435], [10.792327, 106.751391], [10.792284, 106.75123], [10.792212, 106.750991], [10.792187, 106.7509], [10.792112, 106.750571], [10.792095, 106.750452], [10.792058, 106.750093], [10.791942, 106.749499], [10.791877, 106.749202], [10.791784, 106.748796], [10.79176, 106.748703], [10.791881, 106.748671], [10.792002, 106.748622], [10.792313, 106.748393], [10.792352, 106.748352], [10.792587, 106.748108], [10.792776, 106.747825], [10.792035, 106.747767], [10.791689, 106.747769], [10.791551, 106.747805], [10.791508, 106.747829], [10.791489, 106.747839], [10.791632, 106.748436], [10.791687, 106.748681], [10.791716, 106.748812], [10.791807, 106.749224], [10.791851, 106.749454], [10.791951, 106.750022], [10.791961, 106.750086], [10.791968, 106.750139], [10.791986, 106.750315], [10.791994, 106.750492], [10.792019, 106.751177], [10.792021, 106.751257], [10.792021, 106.751333], [10.792018, 106.751416], [10.792014, 106.751481], [10.791997, 106.751478], [10.791853, 106.751452], [10.791208, 106.751337], [10.790535, 106.751205], [10.790089, 106.751082], [10.789917, 106.750981], [10.789489, 106.750826], [10.789299, 106.750748], [10.789112, 106.750663], [10.788929, 106.75057], [10.78875, 106.750469], [10.788574, 106.750361], [10.788402, 106.750245], [10.788236, 106.750122], [10.788074, 106.749992], [10.787955, 106.749916], [10.78784, 106.749835], [10.787727, 106.749748], [10.787617, 106.749655], [10.787576, 106.749635], [10.787533, 106.749623], [10.787488, 106.74962], [10.787444, 106.749625], [10.787402, 106.749638], [10.787363, 106.749659], [10.787328, 106.749687], [10.787163, 106.749836], [10.786846, 106.750119], [10.786763, 106.750198], [10.786684, 106.75028], [10.786602, 106.750373], [10.786523, 106.750469], [10.786468, 106.75053], [10.786409, 106.750588], [10.786326, 106.750657], [10.786286, 106.750685], [10.786237, 106.750718], [10.78609, 106.750813], [10.785602, 106.751198], [10.783932, 106.752671], [10.782464, 106.754007], [10.782179, 106.754257], [10.782057, 106.754359], [10.782, 106.754411], [10.78057, 106.755632], [10.780475, 106.755711], [10.780037, 106.756077], [10.779996, 106.756028], [10.77979, 106.756208], [10.77937, 106.75654], [10.778903, 106.756928], [10.778655, 106.757134], [10.77836, 106.757379], [10.77841, 106.757438], [10.777463, 106.758252], [10.776925, 106.75873], [10.775869, 106.759681], [10.775649, 106.759878], [10.775284, 106.760199], [10.774675, 106.760721], [10.774657, 106.760736], [10.774037, 106.761278], [10.773517, 106.761792], [10.773252, 106.762196], [10.773127, 106.762525], [10.773089, 106.762643], [10.773058, 106.762789], [10.773024, 106.763367], [10.773021, 106.763579], [10.773019, 106.763804], [10.772953, 106.766325], [10.772882, 106.766354], [10.772819, 106.766387], [10.772431, 106.766691], [10.772031, 106.767129], [10.771901, 106.766977], [10.771581, 106.767302], [10.771344, 106.767554], [10.771062, 106.767854], [10.770776, 106.768158], [10.770482, 106.768471], [10.770192, 106.76878], [10.769895, 106.769095], [10.768736, 106.767975], [10.767431, 106.766737], [10.767163, 106.767063], [10.768056, 106.76795], [10.768416, 106.768308], [10.769571, 106.769441], [10.770653, 106.77052], [10.77065, 106.77069], [10.770887, 106.770929], [10.771533, 106.771553], [10.771982, 106.772023], [10.772094, 106.772141], [10.772146, 106.77219], [10.772106, 106.772243], [10.772022, 106.772411], [10.771924, 106.772567], [10.771786, 106.772738], [10.771107, 106.773513], [10.770685, 106.774044], [10.770136, 106.774738], [10.770006, 106.774876], [10.769953, 106.774862], [10.769909, 106.77486], [10.769842, 106.774873], [10.769781, 106.774905], [10.769731, 106.774952], [10.769697, 106.775013], [10.769681, 106.77508], [10.769678, 106.775133], [10.769407, 106.775483], [10.769297, 106.775624], [10.769038, 106.775958], [10.768877, 106.776166], [10.768508, 106.776642], [10.768302, 106.777034], [10.768207, 106.777148], [10.768108, 106.777283], [10.768003, 106.777424], [10.767985, 106.777448], [10.767905, 106.777604], [10.767163, 106.778448], [10.766752, 106.778906], [10.766262, 106.779448], [10.766098, 106.779637], [10.765991, 106.77976], [10.764816, 106.781128], [10.764736, 106.781211], [10.764789, 106.781257], [10.764833, 106.781295], [10.76537, 106.781815], [10.765833, 106.782285], [10.765863, 106.782312], [10.765982, 106.782326], [10.766139, 106.782407], [10.766175, 106.782421], [10.766241, 106.782446], [10.766334, 106.782896], [10.766369, 106.782959], [10.766413, 106.783179], [10.766415, 106.783227], [10.766484, 106.78343], [10.76658, 106.783674], [10.766646, 106.783823], [10.766712, 106.783972], [10.766747, 106.78405], [10.766783, 106.784131], [10.766927, 106.784378], [10.766974, 106.784434], [10.767127, 106.784616], [10.767744, 106.785211], [10.767431, 106.785554], [10.767121, 106.785893], [10.766826, 106.786186], [10.766542, 106.7865], [10.766244, 106.786763], [10.765997, 106.786904], [10.765717, 106.786989], [10.765637, 106.787039], [10.765608, 106.787111], [10.765611, 106.787153], [10.765613, 106.787171], [10.766426, 106.788974], [10.766554, 106.789256], [10.766849, 106.789909], [10.766913, 106.790052], [10.767201, 106.79069], [10.767953, 106.792453], [10.768241, 106.793059], [10.768412, 106.793408], [10.768617, 106.793716], [10.768822, 106.793984], [10.769162, 106.794323], [10.769776, 106.794894], [10.769846, 106.794958], [10.770294, 106.795378], [10.770165, 106.795524], [10.770108, 106.795586], [10.768669, 106.797148], [10.768435, 106.797058], [10.768198, 106.797183], [10.768105, 106.797231], [10.767679, 106.797435], [10.767492, 106.797529], [10.766899, 106.796295], [10.766721, 106.79583], [10.766522, 106.795392], [10.766351, 106.795038], [10.766756, 106.794811], [10.767055, 106.794644], [10.767356, 106.794475], [10.767655, 106.794308], [10.768091, 106.794065], [10.767226, 106.792104], [10.767169, 106.791909]];
+        var mapObj = map_abdf31f256d8376d68a7bbd48d34ec48;
+        
+        // 1. NỀN DƯỚI: Bản đồ xám trắng CartoDB Positron 100% cho toàn bộ khu vực xung quanh
+        L.tileLayer(&#x27;https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png&#x27;, {
+            maxZoom: 19,
+            subdomains: &#x27;abcd&#x27;,
+            attribution: &#x27;&amp;copy; OpenStreetMap &amp;copy; CARTO&#x27;
+        }).addTo(mapObj);
+        
+        // 2. NỀN TRÊN: Tạo khung riêng chứa OpenStreetMap
+        var osmPane = mapObj.createPane(&#x27;osmCorridorPane&#x27;);
+        osmPane.style.zIndex = 250; // Nằm dưới các Marker (zIndex 400)
+        
+        L.tileLayer(&#x27;https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&#x27;, {
+            maxZoom: 19,
+            attribution: &#x27;&amp;copy; OpenStreetMap&#x27;,
+            pane: &#x27;osmCorridorPane&#x27;
+        }).addTo(mapObj);
+        
+        // 3. CẮT LỚP OPENSTREETMAP CHỈ HIỂN THỊ TRONG HÀNH LANG TUYẾN ĐƯỜNG
+        function updateCorridorClip() {
+            var turfCoords = coords.map(function(pt) { return [pt[1], pt[0]]; });
+            var line = turf.lineString(turfCoords);
+            
+            // Dải hành lang 50m bao quanh tuyến đường
+            var buffered = turf.buffer(line, 0.05, {units: &#x27;kilometers&#x27;});
+            var rings = buffered.geometry.coordinates;
+            
+            var pathParts = [];
+            for (var r = 0; r &lt; rings.length; r++) {
+                var ring = rings[r];
+                var pts = ring.map(function(pt) {
+                    var p = mapObj.latLngToLayerPoint([pt[1], pt[0]]);
+                    return p.x + &quot; &quot; + p.y;
+                });
+                pathParts.push(&quot;M &quot; + pts.join(&quot; L &quot;) + &quot; Z&quot;);
+            }
+            
+            var clipVal = &quot;path(&#x27;&quot; + pathParts.join(&quot; &quot;) + &quot;&#x27;)&quot;;
+            osmPane.style.clipPath = clipVal;
+            osmPane.style.webkitClipPath = clipVal;
+        }
+        
+        // Tự động cập nhật vùng cắt khi phóng to, thu nhỏ hoặc di chuyển bản đồ
+        mapObj.on(&#x27;move zoom viewreset resize&#x27;, updateCorridorClip);
+        updateCorridorClip();
+        
+    }, 300);
+});
+&lt;/script&gt;
+    
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_abdf31f256d8376d68a7bbd48d34ec48&quot; &gt;&lt;/div&gt;
+        
+&lt;/body&gt;
+&lt;script&gt;
+    
+    
+            var map_abdf31f256d8376d68a7bbd48d34ec48 = L.map(
+                &quot;map_abdf31f256d8376d68a7bbd48d34ec48&quot;,
+                {
+                    center: [10.785, 106.765],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  &quot;zoom&quot;: 13,
+  &quot;zoomControl&quot;: true,
+  &quot;preferCanvas&quot;: false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            map_abdf31f256d8376d68a7bbd48d34ec48.fitBounds(
+                [[10.76, 106.74], [10.84, 106.8]],
+                {}
+            );
+        
+    
+            var poly_line_585f76cd9d574a5783639f05ada68b3d = L.polyline(
+                [[10.835828, 106.762613], [10.835944, 106.762583], [10.835986, 106.762538], [10.836584, 106.762281], [10.836351, 106.761874], [10.836502, 106.76181], [10.836695, 106.761723], [10.836811, 106.761645], [10.836895, 106.761548], [10.83702, 106.761328], [10.83708, 106.76125], [10.836909, 106.761126], [10.836876, 106.7611], [10.836825, 106.761073], [10.836812, 106.76107], [10.836801, 106.761074], [10.836778, 106.761092], [10.836771, 106.761099], [10.836762, 106.761101], [10.836755, 106.761095], [10.836695, 106.761018], [10.836656, 106.760994], [10.836625, 106.760972], [10.836573, 106.760932], [10.836544, 106.760907], [10.836533, 106.760899], [10.836525, 106.760901], [10.836512, 106.760909], [10.836482, 106.760938], [10.83647, 106.760947], [10.836456, 106.760946], [10.836445, 106.760934], [10.836429, 106.760911], [10.836414, 106.760894], [10.8364, 106.760878], [10.836322, 106.760756], [10.83622, 106.760632], [10.83606, 106.760718], [10.835943, 106.760838], [10.835935, 106.760875], [10.836027, 106.76104], [10.836023, 106.761058], [10.835911, 106.76109], [10.835794, 106.761109], [10.835691, 106.761056], [10.835427, 106.761022], [10.835336, 106.760959], [10.834809, 106.76098], [10.834692, 106.761035], [10.834771, 106.76127], [10.834787, 106.761473], [10.834787, 106.761677], [10.83477, 106.761741], [10.834739, 106.761854], [10.834287, 106.762588], [10.834121, 106.762855], [10.834096, 106.7629], [10.834083, 106.763029], [10.834124, 106.76326], [10.834186, 106.763469], [10.834352, 106.763879], [10.834423, 106.764054], [10.834629, 106.764476], [10.834737, 106.764727], [10.83482, 106.76495], [10.835307, 106.765221], [10.835753, 106.76547], [10.83571, 106.765516], [10.835656, 106.765575], [10.835586, 106.765618], [10.835538, 106.765701], [10.835481, 106.765796], [10.835268, 106.765677], [10.833939, 106.764932], [10.833083, 106.764463], [10.832172, 106.763956], [10.830865, 106.763229], [10.827534, 106.76138], [10.82691, 106.761034], [10.82664, 106.760885], [10.826509, 106.760807], [10.826327, 106.760703], [10.825208, 106.760053], [10.824944, 106.759901], [10.824631, 106.759729], [10.824216, 106.759502], [10.823477, 106.759168], [10.822693, 106.758865], [10.822552, 106.758809], [10.822203, 106.758723], [10.821991, 106.75867], [10.821344, 106.758517], [10.82038, 106.758288], [10.819789, 106.758175], [10.819707, 106.758161], [10.819628, 106.758148], [10.819325, 106.758152], [10.818691, 106.75803], [10.818474, 106.757911], [10.818413, 106.757899], [10.818362, 106.757889], [10.817752, 106.7578], [10.817165, 106.757682], [10.815926, 106.75742], [10.810899, 106.756482], [10.810141, 106.756299], [10.809985, 106.756249], [10.8099, 106.756223], [10.809734, 106.756169], [10.809498, 106.756078], [10.809204, 106.755953], [10.808883, 106.755819], [10.808609, 106.755697], [10.808383, 106.755594], [10.808217, 106.755506], [10.808056, 106.755426], [10.807782, 106.755275], [10.80769, 106.755225], [10.807605, 106.755178], [10.80758, 106.755114], [10.807431, 106.754945], [10.807052, 106.754513], [10.806173, 106.753612], [10.805709, 106.753117], [10.805571, 106.752982], [10.80546, 106.752896], [10.805363, 106.75285], [10.805267, 106.752828], [10.805148, 106.752818], [10.805014, 106.752845], [10.804858, 106.752919], [10.804651, 106.753056], [10.804296, 106.753304], [10.804172, 106.753375], [10.804056, 106.753433], [10.803913, 106.753473], [10.803606, 106.753552], [10.803436, 106.753548], [10.803109, 106.753501], [10.802875, 106.753436], [10.802785, 106.753411], [10.802027, 106.753287], [10.797128, 106.752407], [10.795831, 106.75217], [10.79313, 106.751669], [10.792773, 106.751607], [10.792577, 106.751576], [10.792367, 106.751542], [10.792349, 106.751473], [10.792339, 106.751435], [10.792327, 106.751391], [10.792284, 106.75123], [10.792212, 106.750991], [10.792187, 106.7509], [10.792112, 106.750571], [10.792095, 106.750452], [10.792058, 106.750093], [10.791942, 106.749499], [10.791877, 106.749202], [10.791784, 106.748796], [10.79176, 106.748703], [10.791881, 106.748671], [10.792002, 106.748622], [10.792313, 106.748393], [10.792352, 106.748352], [10.792587, 106.748108], [10.792776, 106.747825], [10.792035, 106.747767], [10.791689, 106.747769], [10.791551, 106.747805], [10.791508, 106.747829], [10.791489, 106.747839], [10.791632, 106.748436], [10.791687, 106.748681], [10.791716, 106.748812], [10.791807, 106.749224], [10.791851, 106.749454], [10.791951, 106.750022], [10.791961, 106.750086], [10.791968, 106.750139], [10.791986, 106.750315], [10.791994, 106.750492], [10.792019, 106.751177], [10.792021, 106.751257], [10.792021, 106.751333], [10.792018, 106.751416], [10.792014, 106.751481], [10.791997, 106.751478], [10.791853, 106.751452], [10.791208, 106.751337], [10.790535, 106.751205], [10.790089, 106.751082], [10.789917, 106.750981], [10.789489, 106.750826], [10.789299, 106.750748], [10.789112, 106.750663], [10.788929, 106.75057], [10.78875, 106.750469], [10.788574, 106.750361], [10.788402, 106.750245], [10.788236, 106.750122], [10.788074, 106.749992], [10.787955, 106.749916], [10.78784, 106.749835], [10.787727, 106.749748], [10.787617, 106.749655], [10.787576, 106.749635], [10.787533, 106.749623], [10.787488, 106.74962], [10.787444, 106.749625], [10.787402, 106.749638], [10.787363, 106.749659], [10.787328, 106.749687], [10.787163, 106.749836], [10.786846, 106.750119], [10.786763, 106.750198], [10.786684, 106.75028], [10.786602, 106.750373], [10.786523, 106.750469], [10.786468, 106.75053], [10.786409, 106.750588], [10.786326, 106.750657], [10.786286, 106.750685], [10.786237, 106.750718], [10.78609, 106.750813], [10.785602, 106.751198], [10.783932, 106.752671], [10.782464, 106.754007], [10.782179, 106.754257], [10.782057, 106.754359], [10.782, 106.754411], [10.78057, 106.755632], [10.780475, 106.755711], [10.780037, 106.756077], [10.779996, 106.756028], [10.77979, 106.756208], [10.77937, 106.75654], [10.778903, 106.756928], [10.778655, 106.757134], [10.77836, 106.757379], [10.77841, 106.757438], [10.777463, 106.758252], [10.776925, 106.75873], [10.775869, 106.759681], [10.775649, 106.759878], [10.775284, 106.760199], [10.774675, 106.760721], [10.774657, 106.760736], [10.774037, 106.761278], [10.773517, 106.761792], [10.773252, 106.762196], [10.773127, 106.762525], [10.773089, 106.762643], [10.773058, 106.762789], [10.773024, 106.763367], [10.773021, 106.763579], [10.773019, 106.763804], [10.772953, 106.766325], [10.772882, 106.766354], [10.772819, 106.766387], [10.772431, 106.766691], [10.772031, 106.767129], [10.771901, 106.766977], [10.771581, 106.767302], [10.771344, 106.767554], [10.771062, 106.767854], [10.770776, 106.768158], [10.770482, 106.768471], [10.770192, 106.76878], [10.769895, 106.769095], [10.768736, 106.767975], [10.767431, 106.766737], [10.767163, 106.767063], [10.768056, 106.76795], [10.768416, 106.768308], [10.769571, 106.769441], [10.770653, 106.77052], [10.77065, 106.77069], [10.770887, 106.770929], [10.771533, 106.771553], [10.771982, 106.772023], [10.772094, 106.772141], [10.772146, 106.77219], [10.772106, 106.772243], [10.772022, 106.772411], [10.771924, 106.772567], [10.771786, 106.772738], [10.771107, 106.773513], [10.770685, 106.774044], [10.770136, 106.774738], [10.770006, 106.774876], [10.769953, 106.774862], [10.769909, 106.77486], [10.769842, 106.774873], [10.769781, 106.774905], [10.769731, 106.774952], [10.769697, 106.775013], [10.769681, 106.77508], [10.769678, 106.775133], [10.769407, 106.775483], [10.769297, 106.775624], [10.769038, 106.775958], [10.768877, 106.776166], [10.768508, 106.776642], [10.768302, 106.777034], [10.768207, 106.777148], [10.768108, 106.777283], [10.768003, 106.777424], [10.767985, 106.777448], [10.767905, 106.777604], [10.767163, 106.778448], [10.766752, 106.778906], [10.766262, 106.779448], [10.766098, 106.779637], [10.765991, 106.77976], [10.764816, 106.781128], [10.764736, 106.781211], [10.764789, 106.781257], [10.764833, 106.781295], [10.76537, 106.781815], [10.765833, 106.782285], [10.765863, 106.782312], [10.765982, 106.782326], [10.766139, 106.782407], [10.766175, 106.782421], [10.766241, 106.782446], [10.766334, 106.782896], [10.766369, 106.782959], [10.766413, 106.783179], [10.766415, 106.783227], [10.766484, 106.78343], [10.76658, 106.783674], [10.766646, 106.783823], [10.766712, 106.783972], [10.766747, 106.78405], [10.766783, 106.784131], [10.766927, 106.784378], [10.766974, 106.784434], [10.767127, 106.784616], [10.767744, 106.785211], [10.767431, 106.785554], [10.767121, 106.785893], [10.766826, 106.786186], [10.766542, 106.7865], [10.766244, 106.786763], [10.765997, 106.786904], [10.765717, 106.786989], [10.765637, 106.787039], [10.765608, 106.787111], [10.765611, 106.787153], [10.765613, 106.787171], [10.766426, 106.788974], [10.766554, 106.789256], [10.766849, 106.789909], [10.766913, 106.790052], [10.767201, 106.79069], [10.767953, 106.792453], [10.768241, 106.793059], [10.768412, 106.793408], [10.768617, 106.793716], [10.768822, 106.793984], [10.769162, 106.794323], [10.769776, 106.794894], [10.769846, 106.794958], [10.770294, 106.795378], [10.770165, 106.795524], [10.770108, 106.795586], [10.768669, 106.797148], [10.768435, 106.797058], [10.768198, 106.797183], [10.768105, 106.797231], [10.767679, 106.797435], [10.767492, 106.797529], [10.766899, 106.796295], [10.766721, 106.79583], [10.766522, 106.795392], [10.766351, 106.795038], [10.766756, 106.794811], [10.767055, 106.794644], [10.767356, 106.794475], [10.767655, 106.794308], [10.768091, 106.794065], [10.767226, 106.792104], [10.767169, 106.791909]],
+                {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;#1E66E5&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: false, &quot;fillColor&quot;: &quot;#1E66E5&quot;, &quot;fillOpacity&quot;: 0.2, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;noClip&quot;: false, &quot;opacity&quot;: 1.0, &quot;smoothFactor&quot;: 1.0, &quot;stroke&quot;: true, &quot;weight&quot;: 6}
+            ).addTo(map_abdf31f256d8376d68a7bbd48d34ec48);
+        
+    
+            poly_line_585f76cd9d574a5783639f05ada68b3d.bindTooltip(
+                `&lt;div&gt;
+                     Tuyến di chuyển ICD Trường Thọ -&gt; Cảng Cát Lái
+                 &lt;/div&gt;`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_af78974f0f472a2b56df8830c082a5bb = L.marker(
+                [10.8358, 106.7625],
+                {
+}
+            ).addTo(map_abdf31f256d8376d68a7bbd48d34ec48);
+        
+    
+            var icon_e8eb60ef75466c93594333be66e20add = L.AwesomeMarkers.icon(
+                {
+  &quot;markerColor&quot;: &quot;green&quot;,
+  &quot;iconColor&quot;: &quot;white&quot;,
+  &quot;icon&quot;: &quot;play&quot;,
+  &quot;prefix&quot;: &quot;fa&quot;,
+  &quot;extraClasses&quot;: &quot;fa-rotate-0&quot;,
+}
+            );
+        
+    
+        var popup_93d98cfeadebb2fa414190dbc9581521 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: false,
+  &quot;closeOnClick&quot;: false,
+});
+
+        
+            
+                var html_73cfcf3cebe37291928d73c65aba9668 = $(`&lt;div id=&quot;html_73cfcf3cebe37291928d73c65aba9668&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;&lt;b&gt;ICD TRƯỜNG THỌ&lt;/b&gt;&lt;/div&gt;`)[0];
+                popup_93d98cfeadebb2fa414190dbc9581521.setContent(html_73cfcf3cebe37291928d73c65aba9668);
+            
+        
+
+        marker_af78974f0f472a2b56df8830c082a5bb.bindPopup(popup_93d98cfeadebb2fa414190dbc9581521)
+        ;
+
+        
+    
+    
+                marker_af78974f0f472a2b56df8830c082a5bb.setIcon(icon_e8eb60ef75466c93594333be66e20add);
+            
+    
+            var marker_f3f44bab98e92bdd36b0b59db417ebfe = L.marker(
+                [10.7672, 106.7919],
+                {
+}
+            ).addTo(map_abdf31f256d8376d68a7bbd48d34ec48);
+        
+    
+            var icon_ea4a861b2e8521d56a5cdbafcedf176e = L.AwesomeMarkers.icon(
+                {
+  &quot;markerColor&quot;: &quot;red&quot;,
+  &quot;iconColor&quot;: &quot;white&quot;,
+  &quot;icon&quot;: &quot;flag-checkered&quot;,
+  &quot;prefix&quot;: &quot;fa&quot;,
+  &quot;extraClasses&quot;: &quot;fa-rotate-0&quot;,
+}
+            );
+        
+    
+        var popup_b6f81a6a73ceeaa5fb5e6a2731e96b1e = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: false,
+  &quot;closeOnClick&quot;: false,
+});
+
+        
+            
+                var html_f39f091ef4571f3acce31bf1aaf28529 = $(`&lt;div id=&quot;html_f39f091ef4571f3acce31bf1aaf28529&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;&lt;b&gt;CẢNG CÁT LÁI&lt;/b&gt;&lt;/div&gt;`)[0];
+                popup_b6f81a6a73ceeaa5fb5e6a2731e96b1e.setContent(html_f39f091ef4571f3acce31bf1aaf28529);
+            
+        
+
+        marker_f3f44bab98e92bdd36b0b59db417ebfe.bindPopup(popup_b6f81a6a73ceeaa5fb5e6a2731e96b1e)
+        ;
+
+        
+    
+    
+                marker_f3f44bab98e92bdd36b0b59db417ebfe.setIcon(icon_ea4a861b2e8521d56a5cdbafcedf176e);
+            
+    
+            var marker_0748df2da9dac4d73292d42990cbfc6d = L.marker(
+                [10.7788, 106.7568],
+                {
+}
+            ).addTo(map_abdf31f256d8376d68a7bbd48d34ec48);
+        
+    
+            var icon_b7a52ccab5cc49885672a0626cd32af8 = L.AwesomeMarkers.icon(
+                {
+  &quot;markerColor&quot;: &quot;orange&quot;,
+  &quot;iconColor&quot;: &quot;white&quot;,
+  &quot;icon&quot;: &quot;exclamation-triangle&quot;,
+  &quot;prefix&quot;: &quot;fa&quot;,
+  &quot;extraClasses&quot;: &quot;fa-rotate-0&quot;,
+}
+            );
+        
+    
+        var popup_750d38d7bd941db5abc86921db20abf3 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: false,
+  &quot;closeOnClick&quot;: false,
+});
+
+        
+            
+                var html_232862453f17dcf9fb9f1d1ad81ffd84 = $(`&lt;div id=&quot;html_232862453f17dcf9fb9f1d1ad81ffd84&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;&lt;b&gt;⚠️ SỰ CỐ TẠI ĐƯỜNG ĐỒNG VĂN CỐNG&lt;/b&gt;&lt;/div&gt;`)[0];
+                popup_750d38d7bd941db5abc86921db20abf3.setContent(html_232862453f17dcf9fb9f1d1ad81ffd84);
+            
+        
+
+        marker_0748df2da9dac4d73292d42990cbfc6d.bindPopup(popup_750d38d7bd941db5abc86921db20abf3)
+        ;
+
+        
+    
+    
+                marker_0748df2da9dac4d73292d42990cbfc6d.setIcon(icon_b7a52ccab5cc49885672a0626cd32af8);
+            
+&lt;/script&gt;
+&lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div></div>
+            
+            <div class="info-box">
+                <h4>📅 KẾ HOẠCH LỊCH TRÌNH & SỰ CỐ</h4>
+                <p>⏰ <b>Xe rời ICD:</b> 15/10 - 08:15</p>
+                <p>⏰ <b>ETA Cát Lái:</b> 15/10 - 09:30 → <span class="warning-text">11:45 (Trễ do sự cố)</span></p>
+                <p>⏰ <b>Closing Time:</b> 15/10 - 13:00</p>
+                <p>⏰ <b>Gate Closing:</b> 15/10 - 14:00</p>
+                <p>⏰ <b>ETD Tàu:</b> 15/10 - 18:00</p>
+                <hr style="border:0; border-top:1px solid #e2e8f0;">
+                <p class="warning-text">⚠️ <b>THẺ SỰ CỐ 1 (15/10 - ĐƯỜNG BỘ):</b></p>
+                <p style="margin:2px 0;">• 09:00: Tai nạn giao thông trên đường Đồng Văn Cống ➔ ETA Cát Lái trễ từ 09:30 thành 11:45.</p>
+                <p style="margin:2px 0;">• 09:20: Xe đầu kéo báo lỗi kỹ thuật (Chờ xe thay thế 60 phút).</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-card">
+        <div class="section-title">2. CHẶNG ĐƯỜNG BIỂN: CẢNG CÁT LÁI → HAMBURG, ĐỨC</div>
+        <div class="grid-sea">
+            <div class="map-frame"><div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><span style="color:#565656">Make this Notebook Trusted to load map: File -> Trust Notebook</span><iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    
+    &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css&quot;/&gt;
+    
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
+            &lt;style&gt;
+                #map_ccff30bac0f40cec55c12c9bf2799959 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            &lt;/style&gt;
+
+            &lt;style&gt;html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            &lt;/style&gt;
+
+            &lt;style&gt;#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            &lt;/style&gt;
+
+            &lt;script&gt;
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            &lt;/script&gt;
+
+        
+&lt;/head&gt;
+&lt;body&gt;
+    
+    
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_ccff30bac0f40cec55c12c9bf2799959&quot; &gt;&lt;/div&gt;
+        
+&lt;/body&gt;
+&lt;script&gt;
+    
+    
+            var map_ccff30bac0f40cec55c12c9bf2799959 = L.map(
+                &quot;map_ccff30bac0f40cec55c12c9bf2799959&quot;,
+                {
+                    center: [15.0, 85.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  &quot;zoom&quot;: 3,
+  &quot;zoomControl&quot;: true,
+  &quot;preferCanvas&quot;: false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_ce3f6ebd0e6d8d8bd3486272a76412a2 = L.tileLayer(
+                &quot;https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png&quot;,
+                {
+  &quot;minZoom&quot;: 0,
+  &quot;maxZoom&quot;: 20,
+  &quot;maxNativeZoom&quot;: 20,
+  &quot;noWrap&quot;: false,
+  &quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\&quot;https://carto.com/attributions\&quot;\u003eCARTO\u003c/a\u003e&quot;,
+  &quot;subdomains&quot;: &quot;abcd&quot;,
+  &quot;detectRetina&quot;: false,
+  &quot;tms&quot;: false,
+  &quot;opacity&quot;: 1,
+}
+
+            );
+        
+    
+            tile_layer_ce3f6ebd0e6d8d8bd3486272a76412a2.addTo(map_ccff30bac0f40cec55c12c9bf2799959);
+        
+    
+            var poly_line_be97cfb8e0479bbd6335cb05166bdd2b = L.polyline(
+                [[10.7672, 106.7919], [10.65, 106.85], [10.35, 107.03], [8.5, 106.0], [4.0, 104.5], [1.2644, 103.84], [2.5, 101.5], [5.8, 95.3], [6.0, 80.0], [11.8, 51.5], [12.58, 43.32], [15.0, 41.8], [27.8, 34.2], [29.93, 32.55], [30.58, 32.27], [36.0, 15.0], [35.95, -5.6], [43.5, -9.5], [50.8, 1.2], [53.5461, 9.966]],
+                {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;#0284C7&quot;, &quot;dashArray&quot;: &quot;8, 8&quot;, &quot;dashOffset&quot;: null, &quot;fill&quot;: false, &quot;fillColor&quot;: &quot;#0284C7&quot;, &quot;fillOpacity&quot;: 0.2, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;noClip&quot;: false, &quot;opacity&quot;: 0.9, &quot;smoothFactor&quot;: 1.0, &quot;stroke&quot;: true, &quot;weight&quot;: 5}
+            ).addTo(map_ccff30bac0f40cec55c12c9bf2799959);
+        
+    
+            var marker_8ab94f4d6383f9962b71a6e9bb36da48 = L.marker(
+                [10.7672, 106.7919],
+                {
+}
+            ).addTo(map_ccff30bac0f40cec55c12c9bf2799959);
+        
+    
+            var icon_b12d54e4247c938f89d3a3f36e0eb1d3 = L.AwesomeMarkers.icon(
+                {
+  &quot;markerColor&quot;: &quot;red&quot;,
+  &quot;iconColor&quot;: &quot;white&quot;,
+  &quot;icon&quot;: &quot;ship&quot;,
+  &quot;prefix&quot;: &quot;fa&quot;,
+  &quot;extraClasses&quot;: &quot;fa-rotate-0&quot;,
+}
+            );
+        
+    
+        var popup_d78e46740da981e2035a12858e769fde = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_cb6f2e16112008b745b2999ff2556dbb = $(`&lt;div id=&quot;html_cb6f2e16112008b745b2999ff2556dbb&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;&lt;b&gt;Cảng Cát Lái (Việt Nam)&lt;/b&gt;&lt;/div&gt;`)[0];
+                popup_d78e46740da981e2035a12858e769fde.setContent(html_cb6f2e16112008b745b2999ff2556dbb);
+            
+        
+
+        marker_8ab94f4d6383f9962b71a6e9bb36da48.bindPopup(popup_d78e46740da981e2035a12858e769fde)
+        ;
+
+        
+    
+    
+                marker_8ab94f4d6383f9962b71a6e9bb36da48.setIcon(icon_b12d54e4247c938f89d3a3f36e0eb1d3);
+            
+    
+            var marker_7809ac3800eac58f0b7a1dc7d377ea40 = L.marker(
+                [1.2644, 103.84],
+                {
+}
+            ).addTo(map_ccff30bac0f40cec55c12c9bf2799959);
+        
+    
+            var icon_8e5fd8823aabd9a193b284587a4b6da8 = L.AwesomeMarkers.icon(
+                {
+  &quot;markerColor&quot;: &quot;orange&quot;,
+  &quot;iconColor&quot;: &quot;white&quot;,
+  &quot;icon&quot;: &quot;exclamation-triangle&quot;,
+  &quot;prefix&quot;: &quot;fa&quot;,
+  &quot;extraClasses&quot;: &quot;fa-rotate-0&quot;,
+}
+            );
+        
+    
+        var popup_6f9e99e3bc13f052b71b1cbba784ca98 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_75b4dc9339cbaaca3e6458df6125f12a = $(`&lt;div id=&quot;html_75b4dc9339cbaaca3e6458df6125f12a&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;&lt;b&gt;⚠️ VỊ TRÍ SỰ CỐ 2 (CẢNG SINGAPORE)&lt;/b&gt;&lt;/div&gt;`)[0];
+                popup_6f9e99e3bc13f052b71b1cbba784ca98.setContent(html_75b4dc9339cbaaca3e6458df6125f12a);
+            
+        
+
+        marker_7809ac3800eac58f0b7a1dc7d377ea40.bindPopup(popup_6f9e99e3bc13f052b71b1cbba784ca98)
+        ;
+
+        
+    
+    
+                marker_7809ac3800eac58f0b7a1dc7d377ea40.setIcon(icon_8e5fd8823aabd9a193b284587a4b6da8);
+            
+    
+            var marker_786983366502f1dfed327aae2064b790 = L.marker(
+                [53.5461, 9.966],
+                {
+}
+            ).addTo(map_ccff30bac0f40cec55c12c9bf2799959);
+        
+    
+            var icon_83e090f5c7974e6e28dc5bd324af2b72 = L.AwesomeMarkers.icon(
+                {
+  &quot;markerColor&quot;: &quot;red&quot;,
+  &quot;iconColor&quot;: &quot;white&quot;,
+  &quot;icon&quot;: &quot;star&quot;,
+  &quot;prefix&quot;: &quot;fa&quot;,
+  &quot;extraClasses&quot;: &quot;fa-rotate-0&quot;,
+}
+            );
+        
+    
+        var popup_bf77460c64a13f677cd1ff5608305952 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_fc07d6d141cc537c007e9434ea69c9e5 = $(`&lt;div id=&quot;html_fc07d6d141cc537c007e9434ea69c9e5&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;&lt;b&gt;PORT OF HAMBURG Germany&lt;/b&gt;&lt;/div&gt;`)[0];
+                popup_bf77460c64a13f677cd1ff5608305952.setContent(html_fc07d6d141cc537c007e9434ea69c9e5);
+            
+        
+
+        marker_786983366502f1dfed327aae2064b790.bindPopup(popup_bf77460c64a13f677cd1ff5608305952)
+        ;
+
+        
+    
+    
+                marker_786983366502f1dfed327aae2064b790.setIcon(icon_83e090f5c7974e6e28dc5bd324af2b72);
+            
+&lt;/script&gt;
+&lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div></div>
+            
+            <div class="info-box">
+                <h4>⚓ THÔNG TIN HẢI TRÌNH BIỂN</h4>
+                <p>🛫 <b>ETD Cát Lái:</b> 15/10 - 18:00</p>
+                <p>⏳ <b>Transit time dự kiến:</b> ~25 ngày</p>
+                <p>🛬 <b>ETA Hamburg (Kế hoạch):</b> 09/11 → <span class="warning-text">13/11 (Trễ 4 ngày)</span></p>
+                <p>📍 <b>Điểm đến:</b> Port of Hamburg, Germany</p>
+                <p>🔄 <b>Tuyến di chuyển:</b> Cát Lái ➔ Singapore ➔ Hamburg</p>
+                <hr style="border:0; border-top:1px solid #e2e8f0;">
+                <p class="warning-text">⚠️ <b>THẺ SỰ CỐ 2 (26/10 - SINGAPORE):</b></p>
+                <p style="margin:2px 0;">• Thời tiết xấu ➔ Tàu mẹ trễ, container bị <b>rớt tàu nối chuyến</b> tại Singapore.</p>
+                <p style="margin:2px 0;">• Chuyển sang chuyến tiếp theo: 26/10 ➔ 30/10.</p>
+                <p style="margin:2px 0;" class="warning-text">• Hạn giao hàng cuối: 11/11 (Quá hạn phạt 2,000 USD).</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+import folium
+import requests
+
+# ==========================================
+# 1. BẢN ĐỒ CHẶNG 1: ĐƯỜNG BỘ (BÁM THẲNG 100% ĐỒNG VĂN CỐNG)
+# ==========================================
+loc_icd = [10.8358, 106.7625]  # ICD Trường Thọ
+loc_catlai = [10.7672, 106.7919]  # Cảng Cát Lái
+
+# Tọa độ chuẩn xác nằm NGAY TRÊN LÀN XE ĐỒNG VĂN CỐNG (Hướng đi Cát Lái)
+loc_suco = [10.7788, 106.7568]  # Vị trí sự cố trên đại lộ Đồng Văn Cống
+
+# Các điểm nắn tuyến dọc theo trục chính Đồng Văn Cống -> Nguyễn Thị Định
+dvc_start = [10.7870, 106.7520]  # Đầu Đồng Văn Cống (Nút giao Mai Chí Thọ)
+dvc_mid = [10.7740, 106.7608]  # Đồng Văn Cống (Đoạn Thạnh Mỹ Lợi)
+dvc_end = [10.7705, 106.7645]  # Đồng Văn Cống (Đoạn gần Mỹ Thủy)
+my_thuy = [10.7682, 106.7678]  # Nút giao Mỹ Thủy
+
+# Gọi API OSRM nắn tuyến chuẩn xác qua làn đường chính Đồng Văn Cống
+osrm_url = (
+    f"http://router.project-osrm.org/route/v1/driving/"
+    f"{loc_icd[1]},{loc_icd[0]};"
+    f"{dvc_start[1]},{dvc_start[0]};"
+    f"{loc_suco[1]},{loc_suco[0]};"
+    f"{dvc_mid[1]},{dvc_mid[0]};"
+    f"{dvc_end[1]},{dvc_end[0]};"
+    f"{my_thuy[1]},{my_thuy[0]};"
+    f"{loc_catlai[1]},{loc_catlai[0]}"
+    f"?overview=full&geometries=geojson"
+)
+
+try:
+    res = requests.get(osrm_url, timeout=10)
+    data = res.json()
+    route_road_exact = [
+        [pt[1], pt[0]] for pt in data["routes"][0]["geometry"]["coordinates"]
+    ]
+except Exception:
+    route_road_exact = [
+        loc_icd,
+        dvc_start,
+        loc_suco,
+        dvc_mid,
+        dvc_end,
+        my_thuy,
+        loc_catlai,
+    ]
+
+map_road = folium.Map(
+    location=[10.7760, 106.7600], zoom_start=14, tiles="OpenStreetMap"
+)
+
+folium.PolyLine(
+    route_road_exact,
+    color="#1D4ED8",
+    weight=6,
+    opacity=0.85,
+    tooltip="Tuyến đường bộ ICD Trường Thọ -> Đồng Văn Cống -> Cát Lái",
+).add_to(map_road)
+
+folium.Marker(
+    location=loc_icd,
+    popup="<b>ICD TRƯỜNG THỌ</b><br>Số 1A Đường số 9, P. Trường Thọ, TP. Thủ Đức",
+    icon=folium.Icon(color="green", icon="play", prefix="fa"),
+).add_to(map_road)
+
+folium.Marker(
+    location=loc_catlai,
+    popup="<b>CẢNG CÁT LÁI</b><br>Số 1295B Nguyễn Thị Định, P. Cát Lái, TP. Thủ Đức",
+    icon=folium.Icon(color="red", icon="flag-checkered", prefix="fa"),
+).add_to(map_road)
+
+# Ghim sự cố chuẩn xác TRÊN MẶT ĐƯỜNG ĐỒNG VĂN CỐNG
+folium.Marker(
+    location=loc_suco,
+    popup="<b>⚠️ SỰ CỐ TẠI ĐƯỜNG ĐỒNG VĂN CỐNG</b><br>"
+    "• 09:00: Tai nạn giao thông gây kẹt xe nghiêm trọng.<br>"
+    "• ETA Cát Lái trễ từ 09:30 thành 11:45.<br>"
+    "• Xe đầu kéo báo lỗi kỹ thuật (Chờ xe mới 60 phút).",
+    icon=folium.Icon(color="orange", icon="exclamation-triangle", prefix="fa"),
+).add_to(map_road)
+
+
+# ==========================================
+# 2. BẢN ĐỒ CHẶNG 2: ĐƯỜNG BIỂN QUỐC TẾ
+# ==========================================
+loc_singapore = [1.2644, 103.8400]
+loc_suez = [30.5800, 32.2700]
+loc_hamburg = [53.5461, 9.9660]
+
+route_sea_exact = [
+    loc_catlai,
+    [10.6500, 106.8500],
+    [10.3500, 107.0300],
+    [8.5000, 106.0000],
+    [4.0000, 104.5000],
+    loc_singapore,
+    [2.5000, 101.5000],
+    [5.8000, 95.3000],
+    [6.0000, 80.0000],
+    [11.8000, 51.5000],
+    [12.5800, 43.3200],
+    [15.0000, 41.8000],
+    [27.8000, 34.2000],
+    [29.9300, 32.5500],
+    [30.1500, 32.5700],
+    [30.3000, 32.3800],
+    [30.5800, 32.2700],
+    [30.8500, 32.3100],
+    [31.2600, 32.3100],
+    [32.0000, 31.5000],
+    [36.0000, 15.0000],
+    [35.9500, -5.6000],
+    [43.5000, -9.5000],
+    [48.5000, -5.5000],
+    [50.8000, 1.2000],
+    [54.0000, 7.8000],
+    [53.8800, 8.7000],
+    loc_hamburg,
+]
+
+map_sea = folium.Map(
+    location=[15.0, 85.0], zoom_start=3, tiles="OpenStreetMap"
+)
+
+folium.PolyLine(
+    route_sea_exact,
+    color="#0284C7",
+    weight=4,
+    opacity=0.8,
+    dash_array="8, 8",
+    tooltip="Tuyến đường biển Cát Lái -> Hamburg",
+).add_to(map_sea)
+
+folium.Marker(
+    loc_catlai,
+    popup="Cảng Cát Lái (Việt Nam)",
+    icon=folium.Icon(color="red", icon="ship", prefix="fa"),
+).add_to(map_sea)
+
+folium.Marker(
+    location=loc_singapore,
+    popup="<b>⚠️ VỊ TRÍ SỰ CỐ 2 (CẢNG SINGAPORE)</b><br>"
+    "• Thời tiết xấu, tàu mẹ trễ lịch.<br>"
+    "• Container bị rớt tàu nối chuyến.<br>"
+    "• Khắc phục: Đổi sang chuyến tiếp theo ngày 30/10.",
+    icon=folium.Icon(color="orange", icon="exclamation-triangle", prefix="fa"),
+).add_to(map_sea)
+
+folium.Marker(
+    loc_suez,
+    popup="Kênh đào Suez (Egypt)",
+    icon=folium.Icon(color="blue", icon="compass", prefix="fa"),
+).add_to(map_sea)
+
+folium.Marker(
+    loc_hamburg,
+    popup="<b>PORT OF HAMBURG</b><br>Germany",
+    icon=folium.Icon(color="red", icon="star", prefix="fa"),
+).add_to(map_sea)
+
+
+# ==========================================
+# 3. HTML DASHBOARD TỔNG HỢP
+# ==========================================
+html_road = map_road._repr_html_()
+html_sea = map_sea._repr_html_()
+
+dashboard_html = f"""
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Tuyến Vận Chuyển Logistics Chi Tiết</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {{ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 15px; background-color: #f1f5f9; }}
+        .header {{ text-align: center; background-color: #0b2545; color: white; padding: 12px; border-radius: 8px; margin-bottom: 12px; }}
+        .header h2 {{ margin: 0; font-size: 20px; letter-spacing: 0.5px; }}
+        .legend-bar {{ display: flex; justify-content: center; gap: 40px; margin-top: 8px; font-size: 13px; }}
+        
+        .section-card {{ background: white; border-radius: 8px; border: 1px solid #cbd5e1; padding: 12px; margin-bottom: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }}
+        .section-title {{ background-color: #0b2545; color: white; display: inline-block; padding: 4px 12px; font-weight: bold; font-size: 13px; border-radius: 4px; margin-bottom: 10px; }}
+        
+        .grid-container {{ display: grid; grid-template-columns: 280px 1fr 320px; gap: 12px; height: 340px; }}
+        .grid-sea {{ display: grid; grid-template-columns: 1fr 320px; gap: 12px; height: 320px; }}
+        
+        .info-box {{ background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 10px; font-size: 12px; line-height: 1.5; overflow-y: auto; }}
+        .info-box h4 {{ margin: 0 0 6px 0; color: #1e293b; border-bottom: 1px solid #e2e8f0; padding-bottom: 4px; }}
+        
+        .map-frame {{ width: 100%; height: 100%; border-radius: 6px; overflow: hidden; border: 1px solid #cbd5e1; }}
+        
+        .context-bar {{ background-color: #e2e8f0; border: 1px solid #cbd5e1; padding: 8px 12px; border-radius: 6px; font-size: 12px; color: #1e293b; display: flex; align-items: center; gap: 8px; }}
+        .warning-text {{ color: #dc2626; font-weight: bold; }}
+    </style>
+</head>
+<body>
+
+    <!-- HEADER & LEGEND -->
+    <div class="header">
+        <h2>TUYẾN VẬN CHUYỂN: ICD TRƯỜNG THỌ → CẢNG CÁT LÁI → HAMBURG, ĐỨC</h2>
+        <div class="legend-bar">
+            <span><i class="fa-solid fa-truck" style="color: #4ade80;"></i> <b>ĐƯỜNG BỘ:</b> ICD Trường Thọ → Cảng Cát Lái</span>
+            <span><i class="fa-solid fa-ship" style="color: #60a5fa;"></i> <b>ĐƯỜNG BIỂN:</b> Cảng Cát Lái → Hamburg</span>
+            <span><i class="fa-solid fa-location-dot" style="color: #f87171;"></i> <b>ĐÍCH ĐẾN:</b> Port of Hamburg, Germany</span>
+        </div>
+    </div>
+
+    <!-- CHẶNG 1: ĐƯỜNG BỘ NỘI ĐỊA -->
+    <div class="section-card">
+        <div class="section-title">1. CHẶNG ĐƯỜNG BỘ NỘI ĐỊA: ICD TRƯỜNG THỌ → CẢNG CÁT LÁI</div>
+        <div class="grid-container">
+            <div class="info-box">
+                <h4>📍 VỊ TRÍ CHI TIẾT</h4>
+                <p><b>🟢 ICD Trường Thọ:</b><br>Số 1A Đường số 9, P. Trường Thọ, TP. Thủ Đức, TP.HCM</p>
+                <p><b>🔴 Cảng Cát Lái:</b><br>Số 1295B Nguyễn Thị Định, P. Cát Lái, TP. Thủ Đức, TP.HCM</p>
+                <hr style="border:0; border-top:1px solid #e2e8f0;">
+                <p>📏 <b>Khoảng cách:</b> ~8 - 10 km<br>
+                ⏱️ <b>Thời gian di chuyển:</b> 20 - 30 phút (không kẹt xe)</p>
+            </div>
+            
+            <div class="map-frame">{html_road}</div>
+            
+            <div class="info-box">
+                <h4>📅 KẾ HOẠCH LỊCH TRÌNH & SỰ CỐ</h4>
+                <p>⏰ <b>Xe rời ICD:</b> 15/10 - 08:15</p>
+                <p>⏰ <b>ETA Cát Lái:</b> 15/10 - 09:30 → <span class="warning-text">11:45 (Trễ do sự cố)</span></p>
+                <p>⏰ <b>Closing Time:</b> 15/10 - 13:00</p>
+                <p>⏰ <b>Gate Closing:</b> 15/10 - 14:00</p>
+                <p>⏰ <b>ETD Tàu:</b> 15/10 - 18:00</p>
+                <hr style="border:0; border-top:1px solid #e2e8f0;">
+                <p class="warning-text">⚠️ <b>THẺ SỰ CỐ 1 (15/10 - ĐƯỜNG BỘ):</b></p>
+                <p style="margin:2px 0;">• 09:00: Tai nạn giao thông trên đường Đồng Văn Cống ➔ ETA Cát Lái trễ từ 09:30 thành 11:45.</p>
+                <p style="margin:2px 0;">• 09:20: Xe đầu kéo báo lỗi kỹ thuật (Chờ xe thay thế 60 phút).</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CHẶNG 2: ĐƯỜNG BIỂN QUỐC TẾ -->
+    <div class="section-card">
+        <div class="section-title">2. CHẶNG ĐƯỜNG BIỂN: CẢNG CÁT LÁI → HAMBURG, ĐỨC</div>
+        <div class="grid-sea">
+            <div class="map-frame">{html_sea}</div>
+            
+            <div class="info-box">
+                <h4>⚓ THÔNG TIN HẢI TRÌNH BIỂN</h4>
+                <p>🛫 <b>ETD Cát Lái:</b> 15/10 - 18:00</p>
+                <p>⏳ <b>Transit time dự kiến:</b> ~25 ngày</p>
+                <p>🛬 <b>ETA Hamburg (Kế hoạch):</b> 09/11 → <span class="warning-text">13/11 (Trễ 4 ngày)</span></p>
+                <p>📍 <b>Điểm đến:</b> Port of Hamburg, Germany</p>
+                <p>🔄 <b>Tuyến di chuyển:</b> Cát Lái ➔ Singapore ➔ Kênh Suez ➔ Hamburg</p>
+                <hr style="border:0; border-top:1px solid #e2e8f0;">
+                <p class="warning-text">⚠️ <b>THẺ SỰ CỐ 2 (26/10 - SINGAPORE):</b></p>
+                <p style="margin:2px 0;">• Thời tiết xấu ➔ Tàu mẹ trễ, container bị <b>rớt tàu nối chuyến</b> tại Singapore.</p>
+                <p style="margin:2px 0;">• Khắc phục: Chuyển sang chuyến tiếp theo ngày 30/10.</p>
+                <p style="margin:2px 0;" class="warning-text">• Hạn giao hàng cuối: 11/11 (Quá hạn phạt 2,000 USD).</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER BỐI CẢNH -->
+    <div class="context-bar">
+        <i class="fa-solid fa-clipboard-list" style="font-size: 16px; color: #0b2545;"></i>
+        <span><b>BỐI CẢNH:</b> Điều phối 01 container 40HC từ ICD Trường Thọ → Cảng Cát Lái → Hamburg (Đức), đảm bảo giao hàng đúng kế hoạch với chi phí hợp lý.</span>
+    </div>
+
+</body>
+</html>
+"""
+
+with open("ban_do_logistics_chi_tiet_full.html", "w", encoding="utf-8") as f:
+    f.write(dashboard_html)
+
+print("Đã khớp chính xác 100% trên trục đường Đồng Văn Cống!")
+import json
+import os
+import webbrowser
+import folium
+import requests
+
+# ==========================================
+# 1. KHỞI TẠO TỌA ĐỘ VÀ TUYẾN ĐƯỜNG BỘ
+# ==========================================
+loc_icd = [10.8358, 106.7625]  # ICD Trường Thọ
+loc_catlai = [10.7672, 106.7919]  # Cảng Cát Lái
+loc_suco = [10.7788, 106.7568]  # Sự cố Đồng Văn Cống
+
+nut_an_phu = [10.7925, 106.7485]
+nut_my_thuy = [10.7682, 106.7678]
+
+# Gọi OSRM lấy lộ trình đường bộ thực tế
+osrm_url = (
+    f"http://router.project-osrm.org/route/v1/driving/"
+    f"{loc_icd[1]},{loc_icd[0]};"
+    f"{nut_an_phu[1]},{nut_an_phu[0]};"
+    f"{loc_suco[1]},{loc_suco[0]};"
+    f"{nut_my_thuy[1]},{nut_my_thuy[0]};"
+    f"{loc_catlai[1]},{loc_catlai[0]}"
+    f"?overview=full&geometries=geojson"
+)
+
+try:
+    res = requests.get(osrm_url, timeout=10)
+    data = res.json()
+    route_road_exact = [
+        [pt[1], pt[0]] for pt in data["routes"][0]["geometry"]["coordinates"]
+    ]
+except Exception:
+    route_road_exact = [loc_icd, nut_an_phu, loc_suco, nut_my_thuy, loc_catlai]
+
+# ==========================================
+# 2. TẠO BẢN ĐỒ ĐƯỜNG BỘ FOLIUM
+# ==========================================
+# Khởi tạo bản đồ trống (tiles=None) để nhúng 2 lớp bản đồ lồng nhau ở bước sau
+map_road = folium.Map(
+    location=[10.7850, 106.7650], zoom_start=13, tiles=None
+)
+map_road.fit_bounds([[10.7600, 106.7400], [10.8400, 106.8000]])
+
+# Vẽ tuyến đường chính màu xanh dương nổi bật
+folium.PolyLine(
+    route_road_exact,
+    color="#1E66E5",
+    weight=6,
+    opacity=1.0,
+    tooltip="Tuyến di chuyển ICD Trường Thọ -> Cảng Cát Lái",
+).add_to(map_road)
+
+# Marker ICD Trường Thọ
+popup_icd = folium.Popup(
+    "<b>ICD TRƯỜNG THỌ</b>"
+)
+popup_icd.options["autoClose"] = False
+popup_icd.options["closeOnClick"] = False
+folium.Marker(
+    location=loc_icd,
+    popup=popup_icd,
+    icon=folium.Icon(color="green", icon="play", prefix="fa"),
+).add_to(map_road)
+
+# Marker Cảng Cát Lái
+popup_catlai = folium.Popup(
+    "<b>CẢNG CÁT LÁI</b>"
+)
+popup_catlai.options["autoClose"] = False
+popup_catlai.options["closeOnClick"] = False
+folium.Marker(
+    location=loc_catlai,
+    popup=popup_catlai,
+    icon=folium.Icon(color="red", icon="flag-checkered", prefix="fa"),
+).add_to(map_road)
+
+# Marker Sự cố
+popup_suco1 = folium.Popup("<b>⚠️ SỰ CỐ TẠI ĐƯỜNG ĐỒNG VĂN CỐNG</b>")
+popup_suco1.options["autoClose"] = False
+popup_suco1.options["closeOnClick"] = False
+folium.Marker(
+    location=loc_suco,
+    popup=popup_suco1,
+    icon=folium.Icon(color="orange", icon="exclamation-triangle", prefix="fa"),
+).add_to(map_road)
+
+# ==========================================
+# 3. KỸ THUẬT DUAL TILE LAYER + CLIP-PATH
+# ==========================================
+map_var_name = map_road.get_name()
+route_json = json.dumps(route_road_exact)
+
+dual_layer_script = f"""
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Turf.js/6.5.0/turf.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {{
+    setTimeout(function() {{
+        var coords = {route_json};
+        var mapObj = {map_var_name};
+        
+        // 1. NỀN DƯỚI: Bản đồ xám trắng CartoDB Positron 100% cho toàn bộ khu vực xung quanh
+        L.tileLayer('https://{{s}}.basemaps.cartocdn.com/light_all/{{z}}/{{x}}/{{y}}{{r}}.png', {{
+            maxZoom: 19,
+            subdomains: 'abcd',
+            attribution: '&copy; OpenStreetMap &copy; CARTO'
+        }}).addTo(mapObj);
+        
+        // 2. NỀN TRÊN: Tạo khung riêng chứa OpenStreetMap
+        var osmPane = mapObj.createPane('osmCorridorPane');
+        osmPane.style.zIndex = 250; // Nằm dưới các Marker (zIndex 400)
+        
+        L.tileLayer('https://{{s}}.tile.openstreetmap.org/{{z}}/{{x}}/{{y}}.png', {{
+            maxZoom: 19,
+            attribution: '&copy; OpenStreetMap',
+            pane: 'osmCorridorPane'
+        }}).addTo(mapObj);
+        
+        // 3. CẮT LỚP OPENSTREETMAP CHỈ HIỂN THỊ TRONG HÀNH LANG TUYẾN ĐƯỜNG
+        function updateCorridorClip() {{
+            var turfCoords = coords.map(function(pt) {{ return [pt[1], pt[0]]; }});
+            var line = turf.lineString(turfCoords);
+            
+            // Dải hành lang 50m bao quanh tuyến đường
+            var buffered = turf.buffer(line, 0.05, {{units: 'kilometers'}});
+            var rings = buffered.geometry.coordinates;
+            
+            var pathParts = [];
+            for (var r = 0; r < rings.length; r++) {{
+                var ring = rings[r];
+                var pts = ring.map(function(pt) {{
+                    var p = mapObj.latLngToLayerPoint([pt[1], pt[0]]);
+                    return p.x + " " + p.y;
+                }});
+                pathParts.push("M " + pts.join(" L ") + " Z");
+            }}
+            
+            var clipVal = "path('" + pathParts.join(" ") + "')";
+            osmPane.style.clipPath = clipVal;
+            osmPane.style.webkitClipPath = clipVal;
+        }}
+        
+        // Tự động cập nhật vùng cắt khi phóng to, thu nhỏ hoặc di chuyển bản đồ
+        mapObj.on('move zoom viewreset resize', updateCorridorClip);
+        updateCorridorClip();
+        
+    }}, 300);
+}});
+</script>
+"""
+
+map_road.get_root().html.add_child(folium.Element(dual_layer_script))
+
+# ==========================================
+# 4. BẢN ĐỒ CHẶNG 2: ĐƯỜNG BIỂN QUỐC TẾ
+# ==========================================
+loc_singapore = [1.2644, 103.8400]
+loc_hamburg = [53.5461, 9.9660]
+route_sea_exact = [
+    loc_catlai,
+    [10.6500, 106.8500],
+    [10.3500, 107.0300],
+    [8.5000, 106.0000],
+    [4.0000, 104.5000],
+    loc_singapore,
+    [2.5000, 101.5000],
+    [5.8000, 95.3000],
+    [6.0000, 80.0000],
+    [11.8000, 51.5000],
+    [12.5800, 43.3200],
+    [15.0000, 41.8000],
+    [27.8000, 34.2000],
+    [29.9300, 32.5500],
+    [30.5800, 32.2700],
+    [36.0000, 15.0000],
+    [35.9500, -5.6000],
+    [43.5000, -9.5000],
+    [50.8000, 1.2000],
+    loc_hamburg,
+]
+
+map_sea = folium.Map(
+    location=[15.0, 85.0], zoom_start=3, tiles="CartoDB positron"
+)
+folium.PolyLine(
+    route_sea_exact, color="#0284C7", weight=5, opacity=0.9, dash_array="8, 8"
+).add_to(map_sea)
+folium.Marker(
+    loc_catlai,
+    popup="<b>Cảng Cát Lái (Việt Nam)</b>",
+    icon=folium.Icon(color="red", icon="ship", prefix="fa"),
+).add_to(map_sea)
+folium.Marker(
+    loc_singapore,
+    popup="<b>⚠️ VỊ TRÍ SỰ CỐ 2 (CẢNG SINGAPORE)</b>",
+    icon=folium.Icon(color="orange", icon="exclamation-triangle", prefix="fa"),
+).add_to(map_sea)
+folium.Marker(
+    loc_hamburg,
+    popup="<b>PORT OF HAMBURG Germany</b>",
+    icon=folium.Icon(color="red", icon="star", prefix="fa"),
+).add_to(map_sea)
+
+# ==========================================
+# 5. XUẤT DASHBOARD HTML
+# ==========================================
+html_road = map_road._repr_html_()
+html_sea = map_sea._repr_html_()
+
+dashboard_html = f"""
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Tuyến Vận Chuyển Logistics Chi Tiết</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {{ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 15px; background-color: #f8fafc; }}
+        .header {{ text-align: center; background-color: #0b2545; color: white; padding: 12px; border-radius: 8px; margin-bottom: 12px; }}
+        .header h2 {{ margin: 0; font-size: 20px; letter-spacing: 0.5px; }}
+        .legend-bar {{ display: flex; justify-content: center; gap: 40px; margin-top: 8px; font-size: 13px; }}
+        
+        .section-card {{ background: white; border-radius: 8px; border: 1px solid #cbd5e1; padding: 12px; margin-bottom: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }}
+        .section-title {{ background-color: #0b2545; color: white; display: inline-block; padding: 4px 12px; font-weight: bold; font-size: 13px; border-radius: 4px; margin-bottom: 10px; }}
+        
+        .grid-container {{ display: grid; grid-template-columns: 280px 1fr 320px; gap: 12px; height: 380px; }}
+        .grid-sea {{ display: grid; grid-template-columns: 1fr 320px; gap: 12px; height: 320px; }}
+        
+        .info-box {{ background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 10px; font-size: 12px; line-height: 1.5; overflow-y: auto; }}
+        .info-box h4 {{ margin: 0 0 6px 0; color: #1e293b; border-bottom: 1px solid #e2e8f0; padding-bottom: 4px; }}
+        
+        .map-frame {{ width: 100%; height: 100%; border-radius: 6px; overflow: hidden; border: 1px solid #cbd5e1; position: relative; }}
+        .warning-text {{ color: #dc2626; font-weight: bold; }}
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h2>TUYẾN VẬN CHUYỂN: ICD TRƯỜNG THỌ → CẢNG CÁT LÁI → HAMBURG, ĐỨC</h2>
+        <div class="legend-bar">
+            <span><i class="fa-solid fa-truck" style="color: #4ade80;"></i> <b>ĐƯỜNG BỘ:</b> ICD Trường Thọ → Cảng Cát Lái</span>
+            <span><i class="fa-solid fa-ship" style="color: #60a5fa;"></i> <b>ĐƯỜNG BIỂN:</b> Cảng Cát Lái → Hamburg</span>
+            <span><i class="fa-solid fa-location-dot" style="color: #f87171;"></i> <b>ĐÍCH ĐẾN:</b> Port of Hamburg, Germany</span>
+        </div>
+    </div>
+
+    <div class="section-card">
+        <div class="section-title">1. CHẶNG ĐƯỜNG BỘ NỘI ĐỊA: ICD TRƯỜNG THỌ → CẢNG CÁT LÁI</div>
+        <div class="grid-container">
+            <div class="info-box">
+                <h4>📍 VỊ TRÍ CHI TIẾT</h4>
+                <p><b>🟢 ICD Trường Thọ:</b><br>Số 1A Đường số 9, P. Trường Thọ, TP. Thủ Đức, TP.HCM</p>
+                <p><b>🔴 Cảng Cát Lái:</b><br>Số 1295B Nguyễn Thị Định, P. Cát Lái, TP. Thủ Đức, TP.HCM</p>
+                <hr style="border:0; border-top:1px solid #e2e8f0;">
+                <p>📏 <b>Khoảng cách:</b> ~12 - 14 km<br>⏱️ <b>Thời gian di chuyển:</b> 50 - 60 phút (không kẹt xe)</p>
+            </div>
+            
+            <div class="map-frame">{html_road}</div>
+            
+            <div class="info-box">
+                <h4>📅 KẾ HOẠCH LỊCH TRÌNH & SỰ CỐ</h4>
+                <p>⏰ <b>Xe rời ICD:</b> 15/10 - 08:15</p>
+                <p>⏰ <b>ETA Cát Lái:</b> 15/10 - 09:30 → <span class="warning-text">11:45 (Trễ do sự cố)</span></p>
+                <p>⏰ <b>Closing Time:</b> 15/10 - 13:00</p>
+                <p>⏰ <b>Gate Closing:</b> 15/10 - 14:00</p>
+                <p>⏰ <b>ETD Tàu:</b> 15/10 - 18:00</p>
+                <hr style="border:0; border-top:1px solid #e2e8f0;">
+                <p class="warning-text">⚠️ <b>THẺ SỰ CỐ 1 (15/10 - ĐƯỜNG BỘ):</b></p>
+                <p style="margin:2px 0;">• 09:00: Tai nạn giao thông trên đường Đồng Văn Cống ➔ ETA Cát Lái trễ từ 09:30 thành 11:45.</p>
+                <p style="margin:2px 0;">• 09:20: Xe đầu kéo báo lỗi kỹ thuật (Chờ xe thay thế 60 phút).</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-card">
+        <div class="section-title">2. CHẶNG ĐƯỜNG BIỂN: CẢNG CÁT LÁI → HAMBURG, ĐỨC</div>
+        <div class="grid-sea">
+            <div class="map-frame">{html_sea}</div>
+            
+            <div class="info-box">
+                <h4>⚓ THÔNG TIN HẢI TRÌNH BIỂN</h4>
+                <p>🛫 <b>ETD Cát Lái:</b> 15/10 - 18:00</p>
+                <p>⏳ <b>Transit time dự kiến:</b> ~25 ngày</p>
+                <p>🛬 <b>ETA Hamburg (Kế hoạch):</b> 09/11 → <span class="warning-text">13/11 (Trễ 4 ngày)</span></p>
+                <p>📍 <b>Điểm đến:</b> Port of Hamburg, Germany</p>
+                <p>🔄 <b>Tuyến di chuyển:</b> Cát Lái ➔ Singapore ➔ Hamburg</p>
+                <hr style="border:0; border-top:1px solid #e2e8f0;">
+                <p class="warning-text">⚠️ <b>THẺ SỰ CỐ 2 (26/10 - SINGAPORE):</b></p>
+                <p style="margin:2px 0;">• Thời tiết xấu ➔ Tàu mẹ trễ, container bị <b>rớt tàu nối chuyến</b> tại Singapore.</p>
+                <p style="margin:2px 0;">• Chuyển sang chuyến tiếp theo: 26/10 ➔ 30/10.</p>
+                <p style="margin:2px 0;" class="warning-text">• Hạn giao hàng cuối: 11/11 (Quá hạn phạt 2,000 USD).</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+"""
+
+desktop_path = (
+    r"C:\Users\Admin\OneDrive\Desktop\ban_do_logistics_chi_tiet_full.html"
+)
+with open(desktop_path, "w", encoding="utf-8") as f:
+    f.write(dashboard_html)
+
+webbrowser.open(desktop_path)
+print(
+    "Đã cập nhật thành công! Vùng ngoài hoàn toàn là bản đồ xám trắng CartoDB Positron thật, hoàn toàn không còn lớp phủ đè lên."
+)
+import os
+import webbrowser
+import folium
+import requests
+
+# ==========================================
+# 1. BẢN ĐỒ CHẶNG 1: ĐƯỜNG BỘ NỘI ĐỊA
+# ==========================================
+loc_icd = [10.8358, 106.7625]      # ICD Trường Thọ
+loc_catlai = [10.7672, 106.7919]   # Cảng Cát Lái
+loc_suco = [10.7788, 106.7568]     # Vị trí sự cố trên đại lộ Đồng Văn Cống
+
+nut_an_phu = [10.7925, 106.7485]   # Nút giao An Phú
+nut_my_thuy = [10.7682, 106.7678]  # Nút giao Mỹ Thủy
+
+# Gọi OSRM API lấy lộ trình chuẩn
+osrm_url = (
+    f"http://router.project-osrm.org/route/v1/driving/"
+    f"{loc_icd[1]},{loc_icd[0]};"
+    f"{nut_an_phu[1]},{nut_an_phu[0]};"
+    f"{loc_suco[1]},{loc_suco[0]};"
+    f"{nut_my_thuy[1]},{nut_my_thuy[0]};"
+    f"{loc_catlai[1]},{loc_catlai[0]}"
+    f"?overview=full&geometries=geojson"
+)
+
+try:
+    res = requests.get(osrm_url, timeout=10)
+    data = res.json()
+    route_road_exact = [
+        [pt[1], pt[0]] for pt in data["routes"][0]["geometry"]["coordinates"]
+    ]
+except Exception as e:
+    print("Lỗi kết nối OSRM, dùng tọa độ dự phòng:", e)
+    route_road_exact = [loc_icd, nut_an_phu, loc_suco, nut_my_thuy, loc_catlai]
+
+map_road = folium.Map(
+    location=[10.7900, 106.7650], zoom_start=13, tiles="CartoDB positron"
+)
+
+map_road.fit_bounds([loc_icd, loc_catlai], padding=(30, 30))
+
+folium.PolyLine(
+    route_road_exact,
+    color="#2563EB",
+    weight=6,
+    opacity=0.9,
+    tooltip="Tuyến đường bộ ICD Trường Thọ -> Cát Lái",
+).add_to(map_road)
+
+# Cấu hình Popup an toàn không gây lỗi
+popup_icd = folium.Popup("<b>ICD TRƯỜNG THỌ</b><br>Số 1A Đường số 9, P. Trường Thọ, TP. Thủ Đức")
+popup_icd.options['autoClose'] = False
+popup_icd.options['closeOnClick'] = False
+folium.Marker(
+    location=loc_icd,
+    popup=popup_icd,
+    icon=folium.Icon(color="green", icon="play", prefix="fa"),
+).add_to(map_road)
+
+popup_catlai = folium.Popup("<b>CẢNG CÁT LÁI</b><br>Số 1295B Nguyễn Thị Định, P. Cát Lái, TP. Thủ Đức")
+popup_catlai.options['autoClose'] = False
+popup_catlai.options['closeOnClick'] = False
+folium.Marker(
+    location=loc_catlai,
+    popup=popup_catlai,
+    icon=folium.Icon(color="red", icon="flag-checkered", prefix="fa"),
+).add_to(map_road)
+
+popup_suco1 = folium.Popup(
+    "<b>⚠️ SỰ CỐ TẠI ĐƯỜNG ĐỒNG VĂN CỐNG</b><br>"
+    "• 09:00: Tai nạn giao thông gây kẹt xe nghiêm trọng.<br>"
+    "• ETA Cát Lái trễ từ 09:30 thành 11:45.<br>"
+    "• Xe đầu kéo báo lỗi kỹ thuật (Chờ xe mới 60 phút)."
+)
+popup_suco1.options['autoClose'] = False
+popup_suco1.options['closeOnClick'] = False
+folium.Marker(
+    location=loc_suco,
+    popup=popup_suco1,
+    icon=folium.Icon(color="orange", icon="exclamation-triangle", prefix="fa"),
+).add_to(map_road)
+
+
+# ==========================================
+# 2. BẢN ĐỒ CHẶNG 2: ĐƯỜNG BIỂN QUỐC TẾ
+# ==========================================
+loc_singapore = [1.2644, 103.8400]
+loc_suez = [30.5800, 32.2700]
+loc_hamburg = [53.5461, 9.9660]
+
+route_sea_exact = [
+    loc_catlai,
+    [10.6500, 106.8500],
+    [10.3500, 107.0300],
+    [8.5000, 106.0000],
+    [4.0000, 104.5000],
+    loc_singapore,
+    [2.5000, 101.5000],
+    [5.8000, 95.3000],
+    [6.0000, 80.0000],
+    [11.8000, 51.5000],
+    [12.5800, 43.3200],
+    [15.0000, 41.8000],
+    [27.8000, 34.2000],
+    [29.9300, 32.5500],
+    [30.1500, 32.5700],
+    [30.3000, 32.3800],
+    [30.5800, 32.2700],
+    [30.8500, 32.3100],
+    [31.2600, 32.3100],
+    [32.0000, 31.5000],
+    [36.0000, 15.0000],
+    [35.9500, -5.6000],
+    [43.5000, -9.5000],
+    [48.5000, -5.5000],
+    [50.8000, 1.2000],
+    [54.0000, 7.8000],
+    [53.8800, 8.7000],
+    loc_hamburg,
+]
+
+map_sea = folium.Map(
+    location=[15.0, 85.0], zoom_start=3, tiles="CartoDB positron"
+)
+
+folium.PolyLine(
+    route_sea_exact,
+    color="#0284C7",
+    weight=4,
+    opacity=0.8,
+    dash_array="8, 8",
+    tooltip="Tuyến đường biển Cát Lái -> Hamburg",
+).add_to(map_sea)
+
+popup_sea_catlai = folium.Popup("Cảng Cát Lái (Việt Nam)")
+popup_sea_catlai.options['autoClose'] = False
+popup_sea_catlai.options['closeOnClick'] = False
+folium.Marker(
+    loc_catlai,
+    popup=popup_sea_catlai,
+    icon=folium.Icon(color="red", icon="ship", prefix="fa"),
+).add_to(map_sea)
+
+popup_singapore = folium.Popup(
+    "<b>⚠️ VỊ TRÍ SỰ CỐ 2 (CẢNG SINGAPORE)</b><br>"
+    "• Thời tiết xấu, tàu mẹ trễ lịch.<br>"
+    "• Container bị rớt tàu nối chuyến.<br>"
+    "• Chuyển sang chuyến tiếp theo: 26/10 ➔ 30/10."
+)
+popup_singapore.options['autoClose'] = False
+popup_singapore.options['closeOnClick'] = False
+folium.Marker(
+    location=loc_singapore,
+    popup=popup_singapore,
+    icon=folium.Icon(color="orange", icon="exclamation-triangle", prefix="fa"),
+).add_to(map_sea)
+
+popup_hamburg = folium.Popup("<b>PORT OF HAMBURG</b><br>Germany")
+popup_hamburg.options['autoClose'] = False
+popup_hamburg.options['closeOnClick'] = False
+folium.Marker(
+    loc_hamburg,
+    popup=popup_hamburg,
+    icon=folium.Icon(color="red", icon="star", prefix="fa"),
+).add_to(map_sea)
+
+
+# ==========================================
+# 3. XUẤT DASHBOARD HTML
+# ==========================================
+html_road = map_road._repr_html_()
+html_sea = map_sea._repr_html_()
+
+dashboard_html = f"""
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Tuyến Vận Chuyển Logistics Chi Tiết</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {{ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 15px; background-color: #f1f5f9; }}
+        .header {{ text-align: center; background-color: #0b2545; color: white; padding: 12px; border-radius: 8px; margin-bottom: 12px; }}
+        .header h2 {{ margin: 0; font-size: 20px; letter-spacing: 0.5px; }}
+        .legend-bar {{ display: flex; justify-content: center; gap: 40px; margin-top: 8px; font-size: 13px; }}
+        .section-card {{ background: white; border-radius: 8px; border: 1px solid #cbd5e1; padding: 12px; margin-bottom: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }}
+        .section-title {{ background-color: #0b2545; color: white; display: inline-block; padding: 4px 12px; font-weight: bold; font-size: 13px; border-radius: 4px; margin-bottom: 10px; }}
+        .grid-container {{ display: grid; grid-template-columns: 280px 1fr 320px; gap: 12px; height: 340px; }}
+        .grid-sea {{ display: grid; grid-template-columns: 1fr 320px; gap: 12px; height: 320px; }}
+        .info-box {{ background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 10px; font-size: 12px; line-height: 1.5; overflow-y: auto; }}
+        .info-box h4 {{ margin: 0 0 6px 0; color: #1e293b; border-bottom: 1px solid #e2e8f0; padding-bottom: 4px; }}
+        .map-frame {{ width: 100%; height: 100%; border-radius: 6px; overflow: hidden; border: 1px solid #cbd5e1; }}
+        .context-bar {{ background-color: #e2e8f0; border: 1px solid #cbd5e1; padding: 8px 12px; border-radius: 6px; font-size: 12px; color: #1e293b; display: flex; align-items: center; gap: 8px; }}
+        .warning-text {{ color: #dc2626; font-weight: bold; }}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>TUYẾN VẬN CHUYỂN: ICD TRƯỜNG THỌ → CẢNG CÁT LÁI → HAMBURG, ĐỨC</h2>
+        <div class="legend-bar">
+            <span><i class="fa-solid fa-truck" style="color: #4ade80;"></i> <b>ĐƯỜNG BỘ:</b> ICD Trường Thọ → Cảng Cát Lái</span>
+            <span><i class="fa-solid fa-ship" style="color: #60a5fa;"></i> <b>ĐƯỜNG BIỂN:</b> Cảng Cát Lái → Hamburg</span>
+            <span><i class="fa-solid fa-location-dot" style="color: #f87171;"></i> <b>ĐÍCH ĐẾN:</b> Port of Hamburg, Germany</span>
+        </div>
+    </div>
+    <div class="section-card">
+        <div class="section-title">1. CHẶNG ĐƯỜNG BỘ NỘI ĐỊA: ICD TRƯỜNG THỌ → CẢNG CÁT LÁI</div>
+        <div class="grid-container">
+            <div class="info-box">
+                <h4>📍 VỊ TRÍ CHI TIẾT</h4>
+                <p><b>🟢 ICD Trường Thọ:</b><br>Số 1A Đường số 9, P. Trường Thọ, TP. Thủ Đức, TP.HCM</p>
+                <p><b>🔴 Cảng Cát Lái:</b><br>Số 1295B Nguyễn Thị Định, P. Cát Lái, TP. Thủ Đức, TP.HCM</p>
+                <hr style="border:0; border-top:1px solid #e2e8f0;">
+                <p>📏 <b>Khoảng cách:</b> ~8 - 10 km<br>⏱️ <b>Thời gian di chuyển:</b> 20 - 30 phút (không kẹt xe)</p>
+            </div>
+            <div class="map-frame">{html_road}</div>
+            <div class="info-box">
+                <h4>📅 KẾ HOẠCH LỊCH TRÌNH & SỰ CỐ</h4>
+                <p>⏰ <b>Xe rời ICD:</b> 15/10 - 08:15</p>
+                <p>⏰ <b>ETA Cát Lái:</b> 15/10 - 09:30 → <span class="warning-text">11:45 (Trễ do sự cố)</span></p>
+                <p>⏰ <b>Closing Time:</b> 15/10 - 13:00</p>
+                <p>⏰ <b>Gate Closing:</b> 15/10 - 14:00</p>
+                <p>⏰ <b>ETD Tàu:</b> 15/10 - 18:00</p>
+                <hr style="border:0; border-top:1px solid #e2e8f0;">
+                <p class="warning-text">⚠️ <b>THẺ SỰ CỐ 1 (15/10 - ĐƯỜNG BỘ):</b></p>
+                <p style="margin:2px 0;">• 09:00: Tai nạn giao thông trên đường Đồng Văn Cống ➔ ETA Cát Lái trễ từ 09:30 thành 11:45.</p>
+                <p style="margin:2px 0;">• 09:20: Xe đầu kéo báo lỗi kỹ thuật (Chờ xe thay thế 60 phút).</p>
+            </div>
+        </div>
+    </div>
+    <div class="section-card">
+        <div class="section-title">2. CHẶNG ĐƯỜNG BIỂN: CẢNG CÁT LÁI → HAMBURG, ĐỨC</div>
+        <div class="grid-sea">
+            <div class="map-frame">{html_sea}</div>
+            <div class="info-box">
+                <h4>⚓ THÔNG TIN HẢI TRÌNH BIỂN</h4>
+                <p>🛫 <b>ETD Cát Lái:</b> 15/10 - 18:00</p>
+                <p>⏳ <b>Transit time dự kiến:</b> ~25 ngày</p>
+                <p>🛬 <b>ETA Hamburg (Kế hoạch):</b> 09/11 → <span class="warning-text">13/11 (Trễ 4 ngày)</span></p>
+                <p>📍 <b>Điểm đến:</b> Port of Hamburg, Germany</p>
+                <p>🔄 <b>Tuyến di chuyển:</b> Cát Lái ➔ Singapore ➔ Hamburg</p>
+                <hr style="border:0; border-top:1px solid #e2e8f0;">
+                <p class="warning-text">⚠️ <b>THẺ SỰ CỐ 2 (26/10 - SINGAPORE):</b></p>
+                <p style="margin:2px 0;">• Thời tiết xấu ➔ Tàu mẹ trễ, container bị <b>rớt tàu nối chuyến</b> tại Singapore.</p>
+                <p style="margin:2px 0;">• Chuyển sang chuyến tiếp theo: 26/10 ➔ 30/10.</p>
+                <p style="margin:2px 0;" class="warning-text">• Hạn giao hàng cuối: 11/11 (Quá hạn phạt 2,000 USD).</p>
+            </div>
+        </div>
+    </div>
+    <div class="context-bar">
+        <i class="fa-solid fa-clipboard-list" style="font-size: 16px; color: #0b2545;"></i>
+        <span><b>BỐI CẢNH:</b> Điều phối 01 container 40HC từ ICD Trường Thọ → Cảng Cát Lái → Hamburg (Đức), đảm bảo giao hàng đúng kế hoạch với chi phí hợp lý.</span>
+    </div>
+</body>
+</html>
+"""
+
+desktop_path = r"C:\Users\Admin\OneDrive\Desktop\ban_do_logistics_chi_tiet_full.html"
+with open(desktop_path, "w", encoding="utf-8") as f:
+    f.write(dashboard_html)
+
+webbrowser.open(desktop_path)
+print("Đã tạo file giao diện bản đồ thành công!")
